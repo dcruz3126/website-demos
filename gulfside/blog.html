@@ -24,7 +24,12 @@
 </section>
 
 <section>
+    <h1>GULFSIDE TEST</h1>
+
+  <p>This is a test.</p>
+
   <p>Posts: {{ site.posts.size }}</p>
+
 
   {% for post in site.posts %}
     <hr>
@@ -32,6 +37,18 @@
     <p>Date: {{ post.date }}</p>
     <p>URL: {{ post.url }}</p>
     <p>Category: {{ post.category }}</p>
+  {% endfor %}
+</section>
+
+<section>
+  <h1>GULFSIDE TEST</h1>
+
+  <p>This is a test.</p>
+
+  <p>Posts: {{ site.posts.size }}</p>
+
+  {% for post in site.posts %}
+    <p>{{ post.title }}</p>
   {% endfor %}
 </section>
 
