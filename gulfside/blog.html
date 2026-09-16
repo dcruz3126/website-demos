@@ -24,13 +24,9 @@
 </section>
 
 <section>
-    <h1>GULFSIDE TEST</h1>
-
+  <h1>GULFSIDE TEST</h1>
   <p>This is a test.</p>
-
   <p>Posts: {{ site.posts.size }}</p>
-
-
   {% for post in site.posts %}
     <hr>
     <p>Title: {{ post.title }}</p>
@@ -40,18 +36,27 @@
   {% endfor %}
 </section>
 
-<section>
-  <h1>GULFSIDE TEST</h1>
-
-  <p>This is a test.</p>
-
-  <p>Posts: {{ site.posts.size }}</p>
-
-  {% for post in site.posts %}
-    <p>{{ post.title }}</p>
-  {% endfor %}
+<section class="section section--cream">
+  <div class="container">
+    <div class="blog-grid">
+      {% for post in site.posts %}
+        {% if post.client == "gulfside" %}
+          <div class="blog-card">
+            <span class="category-pill">{{ post.category }}</span>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+            <div class="blog-card-meta">
+              <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+              <a href="{{ post.url }}" class="card-link">Read more &rarr;</a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
+<!-- 
 <section class="section section--cream">
   <div class="container">
     <div class="blog-grid">
@@ -68,7 +73,7 @@
       {% endfor %}
     </div>
   </div>
-</section>
+</section> -->
 
 {% include gulfside/footer.html %}
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+client: "gulfside"
 title: "5 Signs Your Water Heater Is Waving a White Flag"
 date: 2026-09-01
 author: "Gulfside Plumbing Co."
