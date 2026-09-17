@@ -208,8 +208,8 @@
       <h2>Neighbors who no longer dread their pipes</h2>
     </div>
     
-    {% for rev in site.data.gulfside.reviews %}  
-    <div class="reviews-grid">
+    <div class="reviews-grid"></div>
+    {% for rev in site.data.gulfside.reviews limit:3 %}  
       <div class="review-card">
         <div class="stars">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
