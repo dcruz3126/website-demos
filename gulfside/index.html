@@ -85,9 +85,8 @@
       <p>From a drip that won't quit to a full repipe, our team handles it with the right tools and zero guesswork.</p>
     </div>
     <div class="services-grid">
-
-      {% for svs in site.data.gulfside.home_services %}
-      <div class="service-card service-card--feature">
+    {% for svs in site.data.gulfside.home_services %}
+      <div class="service-card{% if forloop.first %} service-card--feature{% endif %}">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6M4.2 4.2l4.2 4.2M15.5 15.5l4.2 4.2M2 12h6M16 12h6M4.2 19.8l4.2-4.2M15.5 8.5l4.2-4.2"/></svg>
         </div>
@@ -95,7 +94,7 @@
         <p>{{ svs.info }}</p>
         <span class="card-link">Learn more &rarr;</span>
       </div>
-      {% endfor %}
+    {% endfor %}
 
       <!-- <div class="service-card service-card--feature">
         <div class="service-icon">
