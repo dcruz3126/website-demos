@@ -6,7 +6,7 @@
           <span class="logo-mark">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 3.5 6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 3-7.5 6-11Z"/></svg>
           </span>
-          {{ site.data.gulfside.business.name_first }} <em>{{ site.data.gulfside.business.name_emphasis }}</em>
+          {{ site.data.gulfside.business.name_first }}<em>{{ site.data.gulfside.business.name_emphasis }}</em>
         </a>
         <p>{{ site.data.gulfside.footer.statement }}</p>
         <a href="tel:+1{{ site.data.gulfside.business.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}" class="footer-call">
@@ -30,7 +30,7 @@
         <ul>
 
           {% for area in site.data.gulfside.service_areas %}
-            <li>area1</li>
+            <li>{{ area }}</li>
           {% endfor %}
 <!--             
           <li>Tampa</li>
