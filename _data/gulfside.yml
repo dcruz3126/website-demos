@@ -1,18 +1,11 @@
 business:
-  - name: "title"
-    info: "Gulfside Plumbing Co. | Tampa & Hillsborough County Plumbers"
-  - name: "description"
-    info: "Fast, friendly plumbing repair and installation in Tampa and all of Hillsborough County. Licensed, insured, and available for same-day calls."
-  - name: "full_name"
-    info: "Gulfside Plumbing Co."
-  - name: "namefirst"
-    info: "Gulfside"
-  - name: "nameemphasis"
-    info: "Plumbing Co."
-  - name: "phone"
-    info: "(813) 555-0199"
-  - name: "hours"
-    info: "Mon to Fri: 7am to 7pm
+  title: "Gulfside Plumbing Co. | Tampa & Hillsborough County Plumbers"
+  description: "Fast, friendly plumbing repair and installation in Tampa and all of Hillsborough County. Licensed, insured, and available for same-day calls."
+  full_name: "Gulfside Plumbing Co."
+  name_first: "Gulfside"
+  name_emphasis: "Plumbing Co."
+  phone: "(813) 555-1234"
+  hours: "Mon to Fri: 7am to 7pm
 Saturday: 8am to 4pm
 Emergency line: 24/7"
 hero:
