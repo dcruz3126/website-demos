@@ -54,11 +54,11 @@ how_it_works:
   - name: "You relax"
     info: "Clean workspace, clear invoice, and a warranty on the work. Back to your day."
 service_areas:
-  - "county"
-  - "town1"
-  - "town2"
-  - "town3"
-  - "town4"
+  - "Hillsborough"
+  - "Tampa"
+  - "Riverview"
+  - "Temple Terrace"
+  - "Lutz"
 reviews:
   - name: "Maria D, Brandon"
     info: "Showed up in under an hour on a Saturday and fixed our water heater without upselling us on anything we didn't need."
@@ -82,6 +82,8 @@ cta:
 footer:
   - name: "statement"
     info: "Tampa-based plumbers keeping Hillsborough County's pipes happy since day one."
+  - name: "license"
+    info: "Licensed & insured in the State of Florida. CFC placeholder-0000."
 services:
   - name: "Test Service"
     info: "This is a test to see if services updates via yml"
