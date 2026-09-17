@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gulfside Plumbing Co. | Tampa & Hillsborough County Plumbers</title>
+<title>{{ site.data.gulfside.business.title }}</title>
 <meta name="description" content="Fast, friendly plumbing repair and installation in Tampa and all of Hillsborough County. Licensed, insured, and available for same-day calls.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,23 +15,22 @@
 
 {% include gulfside/header.html %}
 
-
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
-      <h1>Leaky pipe? Cranky water heater? We're already grabbing the wrench.</h1>
-      <p class="lede">Gulfside Plumbing Co. keeps Tampa and Hillsborough County dry, warm, and drama-free. Same-day appointments, upfront pricing, and plumbers who actually explain what's going on.</p>
+      <h1>{{ site.data.gulfside.hero.title }}</h1>
+      <p class="lede">{{ site.data.gulfside.hero.subtitle }}</p>
       <div class="hero-actions">
-        <a href="tel:+18135550199" class="btn btn-primary btn-lg">
+        <a href="tel:+1{{ site.data.gulfside.business.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}" class="btn btn-primary btn-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2Z"/></svg>
-          Call (813) 555-0199
+          Call {{ site.data.gulfside.business.phone }}
         </a>
         <a href="services.html" class="btn btn-secondary btn-lg">See our services</a>
       </div>
       <ul class="hero-trust">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 emergency calls</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z"/></svg> Licensed & insured</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> All of Hillsborough County</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ site.data.gulfside.hero.trust1 }}</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z"/></svg> {{ site.data.gulfside.hero.trust2 }}</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> {{ site.data.gulfside.hero.trust3 }}</li>
       </ul>
     </div>
     <div class="hero-art" aria-hidden="true">
