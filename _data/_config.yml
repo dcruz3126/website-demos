@@ -1,0 +1,24 @@
+title: "Your Business"
+description: "Websites, local SEO and automation for contractors."
+url: ""
+
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+
+collections:
+  services:
+    output: true
+    permalink: /services/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+  - scope:
+      type: services
+    values:
+      layout: service

@@ -1,0 +1,32 @@
+name: "YOUR BUSINESS NAME"
+
+tagline: "The systems behind a better-run contracting business."
+
+email: "YOUR EMAIL"
+
+phone: "YOUR PHONE"
+
+service_area: "YOUR SERVICE AREA"
+
+location: ""
+
+description: >
+  We build websites, lead-capture systems, local search infrastructure,
+  and practical automation for contractors who are too busy doing the work
+  to manage every part of their online business themselves.
+
+owner_name: ""
+
+contact:
+  email: "YOUR EMAIL"
+  phone: "YOUR PHONE"
+
+social:
+  facebook: ""
+  instagram: ""
+  linkedin: ""
+
+booking:
+  enabled: true
+  url: ""
+  label: "Book a consultation"

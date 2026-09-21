@@ -1,0 +1,64 @@
+packages:
+
+  - id: foundation
+    name: "Foundation"
+    setup_price: 350
+    monthly_price: 197
+    description: "Get found. Look professional."
+    short_description: >
+      Establish a professional local presence that makes it easy
+      for customers to find your business, understand what you do,
+      and contact you.
+    featured: false
+
+    services:
+      - "Custom local-business website"
+      - "Website hosting, SSL and maintenance"
+      - "Website health monitoring"
+      - "Google Business Profile setup and optimization"
+      - "Google Business Profile health monitoring"
+      - "Automated review requests"
+      - "Review monitoring"
+      - "1 minor website update per month"
+      - "Basic performance reporting"
+
+  - id: framework
+    name: "Framework"
+    setup_price: 550
+    monthly_price: 497
+    description: "Capture more of the business you're already attracting."
+    short_description: >
+      Turn searches, website visits, chats and missed calls into
+      trackable leads while keeping your local presence active.
+    featured: true
+
+    services:
+      - "Everything in Foundation"
+      - "Local directory and citation management"
+      - "Website chatbot and lead capture"
+      - "Missed-call text-back"
+      - "Google Business Profile posts"
+      - "Monthly performance reporting"
+      - "Lead monitoring"
+      - "2 minor website updates per month"
+
+  - id: buildout
+    name: "Buildout"
+    setup_price: 1050
+    monthly_price: 997
+    description: "Keep growing while more of the follow-up happens automatically."
+    short_description: >
+      Combine ongoing local SEO, content growth and automated follow-up
+      so your digital system keeps working when you're busy running jobs.
+    featured: false
+
+    services:
+      - "Everything in Framework"
+      - "Monthly SEO growth program"
+      - "Expanded local SEO"
+      - "Internal-link optimization"
+      - "Automated lead follow-up"
+      - "AI-powered call answering"
+      - "Advanced lead and conversation tracking"
+      - "Advanced performance reporting"
+      - "4 minor website updates per month"

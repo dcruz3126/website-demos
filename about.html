@@ -1,0 +1,72 @@
+---
+layout: default
+title: About
+description: About our approach to websites, local SEO and business automation.
+---
+
+<section class="page-hero">
+
+  <div class="container narrow">
+
+    <span class="eyebrow reveal">
+      ABOUT
+    </span>
+
+    <h1 class="reveal">
+      {{ site.data.about.headline }}
+    </h1>
+
+    <p class="page-intro reveal">
+      {{ site.data.about.intro }}
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="about-section section">
+
+  <div class="container">
+
+    {% if site.data.about.story != "" %}
+
+      <div class="about-story narrow reveal">
+
+        {{ site.data.about.story | markdownify }}
+
+      </div>
+
+    {% endif %}
+
+
+    <div class="approach-grid">
+
+      {% for item in site.data.about.approach %}
+
+        <article class="approach-card reveal">
+
+          <span class="card-number">
+            {{ forloop.index | prepend: "0" }}
+          </span>
+
+          <h2>
+            {{ item.title }}
+          </h2>
+
+          <p>
+            {{ item.text }}
+          </p>
+
+        </article>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{% include cta.html %}

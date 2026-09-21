@@ -1,0 +1,93 @@
+---
+layout: default
+title: Website Design
+description: Professional websites for contractors.
+service_id: website-design
+---
+
+{% assign service = site.data.services.services | where: "id", page.service_id | first %}
+
+<section class="service-hero">
+
+  <div class="container narrow">
+
+    <span class="eyebrow reveal">
+      {{ service.category }}
+    </span>
+
+    <h1 class="reveal">
+      {{ service.page.headline }}
+    </h1>
+
+    <p class="page-intro reveal">
+      {{ service.page.intro }}
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="service-content section">
+
+  <div class="container service-layout">
+
+    <div class="service-main">
+
+      {% for section in service.page.sections %}
+
+        <section class="content-section reveal">
+
+          <h2>
+            {{ section.heading }}
+          </h2>
+
+          <p>
+            {{ section.text }}
+          </p>
+
+        </section>
+
+      {% endfor %}
+
+    </div>
+
+
+    <aside class="service-sidebar reveal">
+
+      <div class="sidebar-card">
+
+        <span class="eyebrow">
+          WHAT'S INCLUDED
+        </span>
+
+        <ul class="check-list">
+
+          {% for benefit in service.page.benefits %}
+
+            <li>
+              <span>✓</span>
+              {{ benefit }}
+            </li>
+
+          {% endfor %}
+
+        </ul>
+
+        <a
+          href="{{ '/contact/' | relative_url }}"
+          class="button button-primary"
+        >
+          Talk About Your Business
+        </a>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+{% include cta.html %}

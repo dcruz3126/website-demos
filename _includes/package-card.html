@@ -1,0 +1,65 @@
+<article
+  class="package-card reveal
+  {% if include.package.featured %}package-featured{% endif %}"
+>
+
+  {% if include.package.featured %}
+    <span class="package-badge">
+      Most Popular
+    </span>
+  {% endif %}
+
+  <div class="package-header">
+
+    <h3>
+      {{ include.package.name }}
+    </h3>
+
+    <p>
+      {{ include.package.description }}
+    </p>
+
+  </div>
+
+  <div class="package-price">
+
+    <span class="price">
+      ${{ include.package.monthly_price }}
+    </span>
+
+    <span class="price-period">
+      / month
+    </span>
+
+  </div>
+
+  <p class="setup-price">
+    ${{ include.package.setup_price }} setup
+  </p>
+
+  <ul class="package-services">
+
+    {% for service in include.package.services %}
+
+      <li>
+        <span>✓</span>
+        {{ service }}
+      </li>
+
+    {% endfor %}
+
+  </ul>
+
+  <a
+    href="{{ '/contact/' | relative_url }}"
+    class="button
+    {% if include.package.featured %}
+      button-primary
+    {% else %}
+      button-outline
+    {% endif %}"
+  >
+    Get Started
+  </a>
+
+</article>

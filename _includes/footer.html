@@ -1,0 +1,78 @@
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <a
+          href="{{ '/' | relative_url }}"
+          class="footer-brand"
+        >
+          {{ site.data.business.name }}
+        </a>
+
+        <p>
+          {{ site.data.business.tagline }}
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Explore</h3>
+
+        <nav class="footer-links">
+
+          {% for item in site.data.navigation.main %}
+
+            <a href="{{ item.url | relative_url }}">
+              {{ item.title }}
+            </a>
+
+          {% endfor %}
+
+        </nav>
+
+      </div>
+
+      <div>
+
+        <h3>Contact</h3>
+
+        <div class="footer-contact">
+
+          {% if site.data.business.email %}
+            <a href="mailto:{{ site.data.business.email }}">
+              {{ site.data.business.email }}
+            </a>
+          {% endif %}
+
+          {% if site.data.business.phone %}
+            <a href="tel:{{ site.data.business.phone }}">
+              {{ site.data.business.phone }}
+            </a>
+          {% endif %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        © {{ 'now' | date: "%Y" }} {{ site.data.business.name }}
+      </span>
+
+      <span>
+        Built for businesses that are busy doing the work.
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>

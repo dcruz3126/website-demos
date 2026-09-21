@@ -1,0 +1,154 @@
+<form
+  class="contact-form"
+  id="contact-form"
+  method="POST"
+  action=""
+>
+
+  <div class="form-grid">
+
+    <div class="form-field">
+
+      <label for="name">
+        Name
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        name="name"
+        autocomplete="name"
+        required
+      >
+
+    </div>
+
+    <div class="form-field">
+
+      <label for="company">
+        Business name
+      </label>
+
+      <input
+        type="text"
+        id="company"
+        name="company"
+        autocomplete="organization"
+        required
+      >
+
+    </div>
+
+  </div>
+
+  <div class="form-grid">
+
+    <div class="form-field">
+
+      <label for="email">
+        Email
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="email"
+        required
+      >
+
+    </div>
+
+    <div class="form-field">
+
+      <label for="phone">
+        Phone
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        autocomplete="tel"
+      >
+
+    </div>
+
+  </div>
+
+  <div class="form-field">
+
+    <label for="service">
+      What can we help with?
+    </label>
+
+    <select
+      id="service"
+      name="service"
+    >
+
+      <option value="">
+        Select one
+      </option>
+
+      {% for service in site.data.services.services %}
+
+        <option value="{{ service.id }}">
+          {{ service.title }}
+        </option>
+
+      {% endfor %}
+
+      <option value="not-sure">
+        I'm not sure yet
+      </option>
+
+    </select>
+
+  </div>
+
+  <div class="form-field">
+
+    <label for="message">
+      Tell us a little about your business
+    </label>
+
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      required
+    ></textarea>
+
+  </div>
+
+  <!-- Honeypot -->
+  <div class="form-hidden" aria-hidden="true">
+    <label for="website">
+      Website
+    </label>
+
+    <input
+      type="text"
+      id="website"
+      name="website"
+      tabindex="-1"
+      autocomplete="off"
+    >
+  </div>
+
+  <button
+    type="submit"
+    class="button button-primary shine"
+  >
+    Send Message
+  </button>
+
+  <div
+    class="form-status"
+    id="form-status"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+</form>

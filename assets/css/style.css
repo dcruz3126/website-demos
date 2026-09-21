@@ -1,0 +1,85 @@
+:root {
+
+  /* ========================================
+     COLORS
+     Change these to rebrand the entire site.
+     ======================================== */
+
+  --color-bg: #10110f;
+  --color-bg-secondary: #171916;
+  --color-surface: #1d201c;
+  --color-surface-light: #252823;
+
+  --color-text: #f1f3ed;
+  --color-text-muted: #a7ada1;
+
+  --color-primary: #c7ff4a;
+  --color-primary-hover: #d8ff79;
+
+  --color-border: #343832;
+
+  --color-success: #8ed66d;
+  --color-danger: #e56b6f;
+
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+
+  --font-body:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  --font-heading:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+
+  /* ========================================
+     LAYOUT
+     ======================================== */
+
+  --container-width: 1180px;
+  --content-width: 760px;
+
+  --header-height: 76px;
+
+
+  /* ========================================
+     SPACING
+     ======================================== */
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 5rem;
+  --space-4xl: 8rem;
+
+
+  /* ========================================
+     BORDERS
+     ======================================== */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+
+  /* ========================================
+     TRANSITIONS
+     ======================================== */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 600ms ease;
+
+}

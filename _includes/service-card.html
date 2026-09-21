@@ -1,0 +1,31 @@
+<article class="service-card reveal">
+
+  <div class="service-icon">
+    {{ include.service.icon }}
+  </div>
+
+  <div class="service-card-content">
+
+    <span class="service-category">
+      {{ include.service.category }}
+    </span>
+
+    <h3>
+      {{ include.service.title }}
+    </h3>
+
+    <p>
+      {{ include.service.description }}
+    </p>
+
+    <a
+      href="{{ include.service.url | relative_url }}"
+      class="text-link"
+    >
+      Learn more
+      <span aria-hidden="true">→</span>
+    </a>
+
+  </div>
+
+</article>

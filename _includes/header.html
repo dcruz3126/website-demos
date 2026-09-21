@@ -1,0 +1,52 @@
+<header class="site-header" id="site-header">
+
+  <div class="container header-inner">
+
+    <a
+      href="{{ '/' | relative_url }}"
+      class="site-logo"
+      aria-label="{{ site.data.business.name }} home"
+    >
+      {{ site.data.business.name }}
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+      aria-label="Open navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      class="main-navigation"
+      id="main-navigation"
+      aria-label="Main navigation"
+    >
+      {% for item in site.data.navigation.main %}
+
+        <a
+          href="{{ item.url | relative_url }}"
+          class="{% if page.url == item.url %}active{% endif %}"
+        >
+          {{ item.title }}
+        </a>
+
+      {% endfor %}
+
+      <a
+        href="{{ '/contact/' | relative_url }}"
+        class="button button-small"
+      >
+        Get Started
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>

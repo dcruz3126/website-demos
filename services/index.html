@@ -1,0 +1,48 @@
+---
+layout: default
+title: Services
+description: Websites, local SEO, lead capture and automation for contractors.
+---
+
+<section class="page-hero">
+
+  <div class="container">
+
+    <span class="eyebrow reveal">
+      SERVICES
+    </span>
+
+    <h1 class="reveal">
+      The digital systems behind your business.
+    </h1>
+
+    <p class="page-intro reveal">
+      We build and maintain the parts of your online business that
+      should keep working while you're busy doing the actual work.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="services-page section">
+
+  <div class="container">
+
+    <div class="services-grid services-grid-large">
+
+      {% for service in site.data.services.services %}
+
+        {% include service-card.html service=service %}
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{% include cta.html %}

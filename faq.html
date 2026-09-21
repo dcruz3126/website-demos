@@ -1,0 +1,43 @@
+---
+layout: default
+title: FAQ
+description: Frequently asked questions about our contractor services.
+---
+
+<section class="page-hero">
+
+  <div class="container narrow">
+
+    <span class="eyebrow reveal">
+      FAQ
+    </span>
+
+    <h1 class="reveal">
+      Questions, answered.
+    </h1>
+
+    <p class="page-intro reveal">
+      A few things you may want to know before getting started.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="faq-section section">
+
+  <div class="container faq-container">
+
+    {% for faq in site.data.faq.faqs %}
+
+      {% include faq-item.html faq=faq %}
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+{% include cta.html %}

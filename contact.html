@@ -1,0 +1,96 @@
+---
+layout: default
+title: Contact
+description: Contact us about your contractor business.
+---
+
+<section class="page-hero">
+
+  <div class="container narrow">
+
+    <span class="eyebrow reveal">
+      CONTACT
+    </span>
+
+    <h1 class="reveal">
+      Let's talk about your business.
+    </h1>
+
+    <p class="page-intro reveal">
+      Tell us a little about what you're doing now, what's getting
+      in the way and where you'd like the business to go.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="contact-section section">
+
+  <div class="container contact-layout">
+
+    <div class="contact-info reveal">
+
+      <span class="eyebrow">
+        GET IN TOUCH
+      </span>
+
+      <h2>
+        You don't need to have everything figured out first.
+      </h2>
+
+      <p>
+        The first conversation is about understanding how your
+        business currently works and where a better system could help.
+      </p>
+
+      {% if site.data.business.email != "" %}
+
+        <a
+          href="mailto:{{ site.data.business.email }}"
+          class="contact-method"
+        >
+          <span>Email</span>
+          {{ site.data.business.email }}
+        </a>
+
+      {% endif %}
+
+      {% if site.data.business.phone != "" %}
+
+        <a
+          href="tel:{{ site.data.business.phone }}"
+          class="contact-method"
+        >
+          <span>Phone</span>
+          {{ site.data.business.phone }}
+        </a>
+
+      {% endif %}
+
+      {% if site.data.business.booking.enabled and site.data.business.booking.url != "" %}
+
+        <a
+          href="{{ site.data.business.booking.url }}"
+          class="button button-outline"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ site.data.business.booking.label }}
+        </a>
+
+      {% endif %}
+
+    </div>
+
+
+    <div class="contact-form-wrapper reveal">
+
+      {% include contact-form.html %}
+
+    </div>
+
+  </div>
+
+</section>
