@@ -79,9 +79,9 @@ permalink: /pricing/
 
         <div class="package-monthly">
 
-          <span class="price-label">
+          <!-- <span class="price-label">
             Monthly
-          </span>
+          </span> -->
 
           <span class="price">
             ${{ package.monthly_price }}
@@ -144,6 +144,150 @@ permalink: /pricing/
   </div>
 
 </section>
+
+<section class="package-comparison">
+
+  <div class="container">
+
+```
+<div class="section-heading">
+  <p class="eyebrow">Compare packages</p>
+
+  <h2>What's included</h2>
+
+  <p>
+    See which services are included at each level.
+  </p>
+</div>
+
+
+<div class="comparison-table-wrapper">
+
+  <table class="comparison-table">
+
+    <thead>
+
+      <tr>
+        <th scope="col">Service</th>
+        <th scope="col">Foundation</th>
+        <th scope="col">Framework</th>
+        <th scope="col">Buildout</th>
+      </tr>
+
+    </thead>
+
+
+    <tbody>
+
+      {% for service in site.data.services.services %}
+
+        <tr>
+
+          <th scope="row">
+            <a href="{{ service.url | relative_url }}">
+              {{ service.title }}
+            </a>
+          </th>
+
+
+          <td>
+
+            {% if service.packages.foundation == true %}
+              <span
+                class="comparison-check"
+                aria-label="Included"
+              >
+                ✓
+              </span>
+
+            {% elsif service.packages.foundation %}
+
+              {{ service.packages.foundation }}
+
+            {% else %}
+
+              <span
+                class="comparison-none"
+                aria-label="Not included"
+              >
+                —
+              </span>
+
+            {% endif %}
+
+          </td>
+
+
+          <td>
+
+            {% if service.packages.framework == true %}
+              <span
+                class="comparison-check"
+                aria-label="Included"
+              >
+                ✓
+              </span>
+
+            {% elsif service.packages.framework %}
+
+              {{ service.packages.framework }}
+
+            {% else %}
+
+              <span
+                class="comparison-none"
+                aria-label="Not included"
+              >
+                —
+              </span>
+
+            {% endif %}
+
+          </td>
+
+
+          <td>
+
+            {% if service.packages.buildout == true %}
+              <span
+                class="comparison-check"
+                aria-label="Included"
+              >
+                ✓
+              </span>
+
+            {% elsif service.packages.buildout %}
+
+              {{ service.packages.buildout }}
+
+            {% else %}
+
+              <span
+                class="comparison-none"
+                aria-label="Not included"
+              >
+                —
+              </span>
+
+            {% endif %}
+
+          </td>
+
+        </tr>
+
+      {% endfor %}
+
+    </tbody>
+
+  </table>
+
+</div>
+```
+
+  </div>
+
+</section>
+
 
 <section class="problem-section section">
 

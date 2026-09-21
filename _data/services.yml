@@ -10,7 +10,10 @@ services:
     icon: "⌂"
     url: "/services/web-design/"
     featured: true
-
+    ```packages:
+      foundation: true
+      framework: true
+      buildout: true```
     page:
       headline: "A website that works while you're working."
       intro: >
@@ -48,7 +51,10 @@ services:
     icon: "⌖"
     url: "/services/local-seo/"
     featured: true
-
+    packages:
+      foundation: true
+      framework: true
+      buildout: true
     page:
       headline: "Make it easier for local customers to find you."
       intro: >
@@ -85,7 +91,10 @@ services:
     icon: "→"
     url: "/services/lead-capture/"
     featured: true
-
+    packages:
+      foundation: true
+      framework: true
+      buildout: true
     page:
       headline: "Stop losing jobs because you couldn't answer the phone."
       intro: >
@@ -121,7 +130,10 @@ services:
     icon: "⚙"
     url: "/services/automation/"
     featured: true
-
+    packages:
+      foundation: true
+      framework: true
+      buildout: true
     page:
       headline: "Let the repetitive stuff happen without you."
       intro: >
