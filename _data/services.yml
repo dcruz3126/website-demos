@@ -10,17 +10,21 @@ services:
     icon: "⌂"
     url: "/services/web-design/"
     featured: true
+
     packages:
       foundation: true
       framework: true
       buildout: true
+
     page:
       headline: "A website that works while you're working."
       intro: >
         When you're on a job, customers shouldn't have to wait around
-        to figure out what you do or how to reach you.
+        to figure out what you do, whether you serve their area, or how
+        to get in touch.
 
       sections:
+
         - heading: "Built around how contractors actually work"
           text: >
             Your website should answer the questions customers have before
@@ -30,7 +34,7 @@ services:
         - heading: "Simple for customers. Manageable for you."
           text: >
             We focus on clear service information, strong calls to action,
-            mobile-friendly design, local search visibility and an
+            mobile-friendly design, local search foundations and an
             infrastructure you don't have to babysit.
 
       benefits:
@@ -39,7 +43,144 @@ services:
         - "Local search foundations"
         - "Strong contact and call-to-action paths"
         - "Fast, lightweight pages"
-        - "Ongoing maintenance"
+        - "Hosting and ongoing maintenance"
+
+
+  - id: hosting-maintenance
+    title: "Hosting & Website Maintenance"
+    short_title: "Hosting & Maintenance"
+    category: "Keep the System Working"
+    description: >
+      Keep your website online, maintained and monitored without
+      having to manage the technical details yourself.
+    icon: "⌁"
+    url: "/services/hosting-maintenance/"
+    featured: false
+
+    packages:
+      foundation: true
+      framework: true
+      buildout: true
+
+    page:
+      headline: "Your website should stay online without becoming another job."
+      intro: >
+        A website isn't useful if it breaks, goes offline, or gets
+        neglected after launch. We handle the routine maintenance and
+        monitoring so you can focus on the work that actually pays you.
+
+      sections:
+
+        - heading: "The technical work stays in the background"
+          text: >
+            Hosting, SSL, routine maintenance and website health monitoring
+            are handled as part of the service rather than becoming another
+            list of things you have to remember.
+
+        - heading: "Small changes shouldn't require a project"
+          text: >
+            Need to update a service, change a phone number, add information
+            or make another minor adjustment? Your package includes a set
+            number of minor website edits each month.
+
+      benefits:
+        - "Website hosting"
+        - "SSL and security"
+        - "Website health monitoring"
+        - "Routine maintenance"
+        - "Minor website updates"
+        - "Managed website infrastructure"
+
+
+  - id: google-business-profile
+    title: "Google Business Profile"
+    short_title: "Google Business Profile"
+    category: "Get Found"
+    description: >
+      Set up and maintain your Google Business Profile so customers
+      can find accurate information about your business.
+    icon: "G"
+    url: "/services/google-business-profile/"
+    featured: true
+
+    packages:
+      foundation: true
+      framework: true
+      buildout: true
+
+    page:
+      headline: "Make your Google listing work as hard as your website."
+      intro: >
+        For many local customers, your Google Business Profile is the
+        first thing they see. Accurate information and an active profile
+        make it easier for people to understand what you do and contact you.
+
+      sections:
+
+        - heading: "Get the important details right"
+          text: >
+            We organize your business information, services, service areas,
+            contact details and other core profile information so customers
+            aren't left guessing.
+
+        - heading: "Keep the profile active"
+          text: >
+            Ongoing management keeps your profile from becoming something
+            that was set up once and then forgotten.
+
+      benefits:
+        - "Google Business Profile setup"
+        - "Profile optimization"
+        - "Business information management"
+        - "Service and category optimization"
+        - "Service-area management"
+        - "Ongoing profile monitoring"
+
+
+  - id: review-requests
+    title: "Review Requests"
+    short_title: "Review Requests"
+    category: "Build Trust"
+    description: >
+      Make it easier to consistently ask satisfied customers for
+      reviews after the job is complete.
+    icon: "★"
+    url: "/services/review-requests/"
+    featured: false
+
+    packages:
+      foundation: true
+      framework: true
+      buildout: true
+
+    page:
+      headline: "Don't leave your best reviews to chance."
+      intro: >
+        Happy customers don't always remember to leave a review on their
+        own. A simple follow-up process makes asking for feedback a normal
+        part of finishing the job.
+
+      sections:
+
+        - heading: "Ask at the right time"
+          text: >
+            Review requests can be triggered as part of your existing
+            customer follow-up process, rather than relying on someone
+            to remember to send them manually.
+
+        - heading: "Make it consistent"
+          text: >
+            Every completed job gets the same opportunity for follow-up,
+            helping you build a more consistent review process over time.
+
+      benefits:
+        - "Automated review requests"
+        - "Post-job follow-up"
+        - "Customer review links"
+        - "Review monitoring"
+        - "Consistent follow-up process"
+        - "Less manual outreach"
+
 
   - id: local-seo
     title: "Local SEO"
@@ -51,10 +192,12 @@ services:
     icon: "⌖"
     url: "/services/local-seo/"
     featured: true
+
     packages:
       foundation: true
       framework: true
       buildout: true
+
     page:
       headline: "Make it easier for local customers to find you."
       intro: >
@@ -63,6 +206,7 @@ services:
         and useful across the places customers search.
 
       sections:
+
         - heading: "One source of truth"
           text: >
             We organize your core business information so your website,
@@ -74,89 +218,369 @@ services:
             structured around the customers and jobs you're trying to reach.
 
       benefits:
-        - "Google Business Profile optimization"
-        - "Citation and directory management"
+        - "Local search optimization"
         - "Service-area optimization"
-        - "Local content"
+        - "Local keyword targeting"
+        - "Local content foundations"
         - "Internal linking"
         - "Search performance monitoring"
 
-  - id: lead-capture
-    title: "Lead Capture"
-    short_title: "Lead Capture"
+
+  - id: citations
+    title: "Directory & Citation Management"
+    short_title: "Citations"
+    category: "Get Found"
+    description: >
+      Keep your business information accurate and consistent across
+      important local directories and business listings.
+    icon: "▤"
+    url: "/services/citations/"
+    featured: false
+
+    packages:
+      foundation: false
+      framework: true
+      buildout: true
+
+    page:
+      headline: "Your business information should match wherever customers find you."
+      intro: >
+        Search engines and customers encounter your business in more
+        places than your website and Google listing. Inconsistent names,
+        phone numbers, addresses or service information can create confusion.
+
+      sections:
+
+        - heading: "Clean up the places that matter"
+          text: >
+            We manage your core business information across relevant
+            directories and local listings, helping establish a consistent
+            online presence.
+
+        - heading: "Keep listings from drifting"
+          text: >
+            Business information changes over time. Ongoing citation
+            management helps keep important listings aligned with your
+            current information.
+
+      benefits:
+        - "Local directory management"
+        - "Citation cleanup"
+        - "Business information consistency"
+        - "Listing monitoring"
+        - "Duplicate listing review"
+        - "Ongoing citation management"
+
+
+  - id: website-chatbot
+    title: "Website Chatbot"
+    short_title: "Website Chat"
     category: "Get the Lead"
     description: >
-      Capture potential customers even when you're on a job and
-      can't answer the phone.
-    icon: "→"
-    url: "/services/lead-capture/"
-    featured: true
+      Give website visitors another way to ask questions and
+      start a conversation when you're unavailable.
+    icon: "◌"
+    url: "/services/website-chatbot/"
+    featured: false
+
     packages:
-      foundation: true
+      foundation: false
       framework: true
       buildout: true
+
     page:
-      headline: "Stop losing jobs because you couldn't answer the phone."
+      headline: "Give website visitors a way to start the conversation."
       intro: >
-        You're working. The customer is calling. By the time you call back,
-        they may already be talking to the next contractor in the search results.
+        Not every customer wants to call. A website chatbot gives visitors
+        another way to ask basic questions, provide their information and
+        take the next step.
 
       sections:
-        - heading: "Turn missed opportunities into conversations"
-          text: >
-            Lead-capture systems give customers another way to reach you
-            and can automatically follow up when you miss a call.
 
-        - heading: "Every inquiry has somewhere to go"
+        - heading: "Help customers without adding another phone line"
           text: >
-            Website forms, chat conversations and missed calls can feed
-            into a consistent lead-tracking process.
+            A chatbot can handle common questions and guide visitors toward
+            the information or contact option they're looking for.
+
+        - heading: "Capture the lead when you're busy"
+          text: >
+            When a visitor is ready to reach out, the conversation can
+            collect the information you need to follow up later.
 
       benefits:
-        - "Website contact forms"
-        - "Chat-based lead capture"
-        - "Missed-call text-back"
+        - "Website chat"
+        - "Basic customer questions"
+        - "Lead information capture"
+        - "Contact notifications"
+        - "Conversation tracking"
+        - "After-hours lead capture"
+
+
+  - id: missed-call-text-back
+    title: "Missed-Call Text-Back"
+    short_title: "Missed-Call Recovery"
+    category: "Get the Lead"
+    description: >
+      Automatically respond to missed calls so potential customers
+      know their call wasn't ignored.
+    icon: "☎"
+    url: "/services/missed-call-text-back/"
+    featured: true
+
+    packages:
+      foundation: false
+      framework: true
+      buildout: true
+
+    page:
+      headline: "Miss a call without losing the customer."
+      intro: >
+        You're under a sink, on a roof, behind a counter or driving to
+        the next job. A missed call doesn't have to become a lost lead.
+
+      sections:
+
+        - heading: "Respond before the customer moves on"
+          text: >
+            When a call is missed, an automated text can acknowledge the
+            call and give the customer a clear next step while you're
+            unavailable.
+
+        - heading: "Turn a missed call into a follow-up"
+          text: >
+            Instead of relying on your memory to call everyone back,
+            missed-call conversations can be captured and tracked as leads.
+
+      benefits:
+        - "Automatic missed-call response"
+        - "Text-back messages"
         - "Lead notifications"
         - "Conversation tracking"
-        - "Basic follow-up automation"
+        - "After-hours response"
+        - "Reduced manual follow-up"
 
-  - id: automation
-    title: "Business Automation"
-    short_title: "Automation"
-    category: "Keep the System Working"
+
+  - id: gbp-posts
+    title: "Google Business Profile Posts"
+    short_title: "GBP Posts"
+    category: "Get Found"
     description: >
-      Automate repetitive follow-up and administrative processes
-      without turning your business into a software project.
-    icon: "⚙"
-    url: "/services/automation/"
-    featured: true
+      Keep your Google Business Profile active with regular posts
+      about services, projects, updates and other useful information.
+    icon: "✎"
+    url: "/services/gbp-posts/"
+    featured: false
+
     packages:
-      foundation: true
-      framework: true
-      buildout: true
+      foundation: false
+      framework: "1–2/mo"
+      buildout: "2/mo"
+
     page:
-      headline: "Let the repetitive stuff happen without you."
+      headline: "Give customers another reason to keep finding you."
       intro: >
-        The goal isn't to automate everything. It's to automate the
-        repetitive things that keep getting pushed aside while you're
-        busy running the business.
+        Your Google Business Profile can do more than display your phone
+        number. Regular posts give you another place to highlight services,
+        updates, projects and useful information.
 
       sections:
-        - heading: "Practical automation"
-          text: >
-            We connect the systems you already use and create simple
-            workflows for things like lead follow-up, review requests,
-            notifications and reporting.
 
-        - heading: "Automation you can understand"
+        - heading: "Stay active without another task on your list"
           text: >
-            Your systems should be documented and maintainable rather
-            than becoming another black box you depend on.
+            We create and publish scheduled Google Business Profile posts
+            so you don't have to remember to keep the profile updated.
+
+        - heading: "Keep the content local"
+          text: >
+            Posts can focus on the services you provide, areas you serve,
+            seasonal needs, projects and other topics relevant to your
+            local customers.
 
       benefits:
-        - "Review request automation"
-        - "Lead follow-up"
-        - "Missed-call recovery"
-        - "Notifications"
-        - "Reporting workflows"
-        - "System monitoring"
+        - "Scheduled GBP posts"
+        - "Service-focused content"
+        - "Local content"
+        - "Call-to-action links"
+        - "Ongoing posting"
+        - "Content planning"
+
+
+  - id: seo-content
+    title: "SEO Content Growth"
+    short_title: "SEO Content"
+    category: "Grow Visibility"
+    description: >
+      Build useful search-focused content around the services,
+      questions and locations that matter to your business.
+    icon: "▧"
+    url: "/services/seo-content/"
+    featured: true
+
+    packages:
+      foundation: false
+      framework: false
+      buildout: true
+
+    page:
+      headline: "Give search engines more useful reasons to find you."
+      intro: >
+        A strong local website shouldn't stay static forever. New,
+        useful content creates more opportunities to answer customer
+        questions and appear for relevant searches.
+
+      sections:
+
+        - heading: "Build around what customers actually search"
+          text: >
+            Content is developed around your services, locations,
+            customer questions and the problems your business solves.
+
+        - heading: "Turn one website into a growing resource"
+          text: >
+            Instead of publishing random articles, we build content that
+            supports your core service pages and strengthens the connections
+            between related topics and locations.
+
+      benefits:
+        - "Search-focused content"
+        - "Service content"
+        - "Local content"
+        - "Customer-question content"
+        - "Internal-link opportunities"
+        - "Ongoing content growth"
+
+
+  - id: lead-follow-up
+    title: "Automated Lead Follow-Up"
+    short_title: "Lead Follow-Up"
+    category: "Get the Lead"
+    description: >
+      Follow up with new leads automatically so inquiries don't
+      disappear while you're busy running the business.
+    icon: "↻"
+    url: "/services/lead-follow-up/"
+    featured: false
+
+    packages:
+      foundation: false
+      framework: false
+      buildout: true
+
+    page:
+      headline: "Follow up without having to remember every lead."
+      intro: >
+        Getting the lead is only the first step. Automated follow-up
+        helps keep a conversation moving when you don't have time to
+        personally respond to every inquiry immediately.
+
+      sections:
+
+        - heading: "Put follow-up on a system"
+          text: >
+            New inquiries can trigger predefined follow-up steps so
+            potential customers receive a timely response instead of
+            waiting for someone to remember.
+
+        - heading: "Keep the human in the loop"
+          text: >
+            Automation handles repetitive communication while giving you
+            a clear place to step in when a lead needs a personal response.
+
+      benefits:
+        - "Automated lead responses"
+        - "Follow-up sequences"
+        - "Lead notifications"
+        - "Conversation tracking"
+        - "Follow-up reminders"
+        - "Lead status monitoring"
+
+
+  - id: ai-call-answering
+    title: "AI Call Answering"
+    short_title: "AI Call Answering"
+    category: "Get the Lead"
+    description: >
+      Give callers an answering option when you can't pick up,
+      with usage-based AI call handling.
+    icon: "◉"
+    url: "/services/ai-call-answering/"
+    featured: true
+
+    packages:
+      foundation: false
+      framework: false
+      buildout: true
+
+    page:
+      headline: "Give every caller a way to get started."
+      intro: >
+        You can't always stop what you're doing to answer the phone.
+        AI call answering provides a first point of contact when you're
+        unavailable and can help capture the information needed for follow-up.
+
+      sections:
+
+        - heading: "Answer when you can't"
+          text: >
+            An AI phone system can handle initial conversations, collect
+            basic information and help direct callers toward the appropriate
+            next step.
+
+        - heading: "Know what happened after the call"
+          text: >
+            Call information and captured lead details can be connected
+            to your lead-tracking process so calls don't disappear into
+            a voicemail inbox.
+
+      benefits:
+        - "AI-powered call answering"
+        - "Basic caller questions"
+        - "Lead information capture"
+        - "Call summaries"
+        - "Lead notifications"
+        - "Usage monitoring"
+
+
+  - id: expanded-local-seo
+    title: "Expanded & Multi-Location SEO"
+    short_title: "Expanded SEO"
+    category: "Grow Visibility"
+    description: >
+      Expand your local search presence across additional services,
+      markets and business locations.
+    icon: "⌖"
+    url: "/services/expanded-local-seo/"
+    featured: false
+
+    packages:
+      foundation: false
+      framework: false
+      buildout: true
+
+    page:
+      headline: "Build a larger search presence as your business grows."
+      intro: >
+        As your business adds services, expands into new areas or operates
+        across multiple locations, your website and local search strategy
+        need to grow with it.
+
+      sections:
+
+        - heading: "Expand without creating a mess"
+          text: >
+            Additional service and location pages are structured around
+            real business operations rather than creating thin pages simply
+            to target more keywords.
+
+        - heading: "Connect services, locations and content"
+          text: >
+            Internal linking and supporting content help search engines
+            understand how your services and locations relate to one another.
+
+      benefits:
+        - "Multi-location SEO"
+        - "Expanded service-area targeting"
+        - "Location pages"
+        - "Service expansion"
+        - "Internal-link optimization"
+        - "Expanded search monitoring"
