@@ -2,50 +2,86 @@
 
   <div class="container header-inner">
 
-    <a
-      href="{{ '/' | relative_url }}"
-      class="site-logo"
-      aria-label="{{ site.data.business.name }} home"
-    >
-      {{ site.data.business.name }}
-    </a>
+```
+<a
+  href="{{ '/' | relative_url }}"
+  class="site-logo"
+  aria-label="{{ site.data.business.name }} home"
+>
+  {{ site.data.business.name }}
+</a>
 
-    <button
-      class="mobile-menu-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="main-navigation"
-      aria-label="Open navigation"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<button
+  class="mobile-menu-toggle"
+  type="button"
+  aria-expanded="false"
+  aria-controls="main-navigation"
+  aria-label="Open navigation"
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
-    <nav
-      class="main-navigation"
-      id="main-navigation"
-      aria-label="Main navigation"
-    >
-      {% for item in site.data.navigation.main %}
+<nav
+  class="main-navigation"
+  id="main-navigation"
+  aria-label="Main navigation"
+>
+
+  {% for item in site.data.navigation.main %}
+
+    {% if item.children %}
+
+      <div class="nav-dropdown">
 
         <a
           href="{{ item.url | relative_url }}"
-          class="{% if page.url == item.url %}active{% endif %}"
+          class="nav-dropdown-toggle {% if page.url contains '/services/' %}active{% endif %}"
         >
           {{ item.title }}
+          <span class="dropdown-arrow" aria-hidden="true">▾</span>
         </a>
 
-      {% endfor %}
+        <div class="nav-dropdown-menu">
+
+          {% for child in item.children %}
+
+            <a
+              href="{{ child.url | relative_url }}"
+              class="{% if page.url == child.url %}active{% endif %}"
+            >
+              {{ child.title }}
+            </a>
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+    {% else %}
 
       <a
-        href="{{ '/contact/' | relative_url }}"
-        class="button button-small"
+        href="{{ item.url | relative_url }}"
+        class="{% if page.url == item.url %}active{% endif %}"
       >
-        Get Started
+        {{ item.title }}
       </a>
 
-    </nav>
+    {% endif %}
+
+  {% endfor %}
+
+  <a
+    href="{{ '/contact/' | relative_url }}"
+    class="button button-small"
+  >
+    Get Started
+  </a>
+
+</nav>
+```
 
   </div>
 

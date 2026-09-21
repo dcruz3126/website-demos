@@ -5,15 +5,28 @@ main:
 
   - title: "Services"
     url: "/services/"
+    children:
+      -title: "Website Design"
+      url: "/services/web-design/"
+      -title: "Local SEO"
+      url: "/services/local-seo/"
+      -title: "Lead Capture"
+      url: "/services/lead-capture/"
+      -title: "Business Automation"
+      url: "/services/automation/"
 
-  - title: "About"
-    url: "/about/"
+
+  - title: "Pricing"
+    url: "/pricing/"
 
   - title: "FAQ"
     url: "/faq/"
 
+  - title: "About"
+    url: "/about/"
+
   - title: "Contact"
     url: "/contact/"
  
-  - title: "Pricing"
-    url: "/pricing/"
+
+ 
