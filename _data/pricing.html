@@ -1,0 +1,184 @@
+---
+
+layout: default
+title: Services & Pricing
+description: Websites, local SEO, lead capture and automation packages for busy contractors.
+permalink: /services/
+---
+<section class="page-hero">
+
+  <div class="container narrow">
+
+
+<span class="eyebrow reveal">
+  SERVICES & PRICING
+</span>
+
+<h1 class="reveal">
+  Choose the system your business needs.
+</h1>
+
+<p class="page-intro reveal">
+  Start with the problems costing you the most. Each package combines
+  practical tools and ongoing support to help your business get found,
+  capture more opportunities and follow through consistently.
+</p>
+
+
+  </div>
+
+</section>
+
+<section class="packages-section section">
+
+  <div class="container">
+
+
+<div class="packages-grid">
+
+  {% for package in site.data.packages.packages %}
+
+    <article
+      class="package-card reveal {% if package.featured %}package-featured{% endif %}"
+    >
+
+      {% if package.featured %}
+
+        <span class="package-badge">
+          MOST POPULAR
+        </span>
+
+      {% endif %}
+
+      <div class="package-header">
+
+        <h2>
+          {{ package.name }}
+        </h2>
+
+        <p class="package-description">
+          {{ package.description }}
+        </p>
+
+      </div>
+
+
+      <div class="package-pricing">
+
+        <div class="package-setup">
+
+          <span class="price-label">
+            Setup
+          </span>
+
+          <span class="price">
+            ${{ package.setup_price }}
+          </span>
+
+        </div>
+
+        <div class="package-monthly">
+
+          <span class="price-label">
+            Monthly
+          </span>
+
+          <span class="price">
+            ${{ package.monthly_price }}
+          </span>
+
+          <span class="price-period">
+            / month
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <p class="package-short-description">
+        {{ package.short_description }}
+      </p>
+
+
+      <div class="package-services">
+
+        <h3>
+          Includes
+        </h3>
+
+        <ul>
+
+          {% for service in package.services %}
+
+            <li>
+              <span class="check-mark">✓</span>
+              {{ service }}
+            </li>
+
+          {% endfor %}
+
+        </ul>
+
+      </div>
+
+
+      <div class="package-action">
+
+        <a
+          href="{{ '/contact/' | relative_url }}"
+          class="button {% if package.featured %}button-primary shine{% else %}button-ghost{% endif %}"
+        >
+          Get Started
+        </a>
+
+      </div>
+
+    </article>
+
+  {% endfor %}
+
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="problem-section section">
+
+  <div class="container narrow">
+
+
+<span class="eyebrow reveal">
+  NOT SURE WHERE TO START?
+</span>
+
+<h2 class="reveal">
+  Start with the problem you want to fix.
+</h2>
+
+<p class="large-text reveal">
+  You don't have to figure out every piece of your online system
+  before getting started. If you know what's getting in the way —
+  missed calls, an outdated website, poor local visibility, or
+  repetitive follow-up — we can start there.
+</p>
+
+<div class="section-heading reveal">
+
+  <a
+    href="{{ '/contact/' | relative_url }}"
+    class="button button-primary shine"
+  >
+    Let's Talk
+  </a>
+
+</div>
+
+
+  </div>
+
+</section>
+
+{% include cta.html %}
