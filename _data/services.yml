@@ -10,10 +10,10 @@ services:
     icon: "⌂"
     url: "/services/web-design/"
     featured: true
-    ```packages:
+    packages:
       foundation: true
       framework: true
-      buildout: true```
+      buildout: true
     page:
       headline: "A website that works while you're working."
       intro: >
