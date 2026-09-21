@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
    * Mobile navigation
    */
 
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navigation = document.querySelector(".main-navigation");
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const mainNavigation = document.querySelector('.site-nav');
 
   if (menuToggle && navigation) {
 

@@ -1,0 +1,113 @@
+---
+layout: default
+title: Free Website Audit
+description: Get a free website audit covering mobile speed, click-to-call, Google visibility, and security.
+---
+
+<section class="audit-page">
+  <div class="container">
+
+<div class="audit-header">
+  <span class="eyebrow">Free Audit</span>
+
+  <h1>Free Website Audit</h1>
+
+  <p class="audit-subtitle">
+    See how your site scores on speed, mobile usability, and SEO.
+    Takes about 30 seconds.
+  </p>
+</div>
+
+<div class="audit-card">
+
+  <div class="audit-included">
+    <h2>What you'll get</h2>
+
+    <ul class="audit-list">
+      <li>
+        <strong>A mobile speed check.</strong>
+        Most of your customers are searching from a job site or their
+        driveway, on their phone. We'll show you how fast your site
+        actually loads for them.
+      </li>
+
+      <li>
+        <strong>A click-to-call check.</strong>
+        Can someone tap your number and call right away, or do they
+        have to hunt for it? This alone can be the difference between
+        a booked job and a missed one.
+      </li>
+
+      <li>
+        <strong>A Google visibility check.</strong>
+        Whether Google can actually read your site well enough to show
+        it when someone nearby searches for what you do.
+      </li>
+
+      <li>
+        <strong>A trust and security check.</strong>
+        Whether your site shows as secure, or quietly scares visitors
+        off before they've even seen your work.
+      </li>
+
+      <li>
+        <strong>One score out of 100.</strong>
+        No jargon, just a clear number so you know exactly where you
+        stand, and exactly what's worth fixing first.
+      </li>
+    </ul>
+
+    <p class="audit-note">
+      Free, no signup required, takes less time than a coffee break.
+    </p>
+  </div>
+
+  <form id="audit-form" class="audit-form">
+
+    <div class="form-field">
+      <label for="url">Your website</label>
+      <input
+        id="url"
+        name="url"
+        type="text"
+        placeholder="yourbusiness.com"
+        autocomplete="url"
+        required
+      >
+    </div>
+
+    <div class="form-field">
+      <label for="email">
+        Email <span>(optional, we'll send you a copy)</span>
+      </label>
+
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="you@business.com"
+        autocomplete="email"
+      >
+    </div>
+
+    <button type="submit" id="submit-btn" class="button button-primary">
+      Run my free audit
+    </button>
+
+  </form>
+
+  <div
+    id="status"
+    class="audit-status"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+  <div id="report" class="audit-report"></div>
+
+</div>
+
+  </div>
+</section>
+
+<script src="{{ '/assets/js/audit.js' | relative_url }}"></script>
