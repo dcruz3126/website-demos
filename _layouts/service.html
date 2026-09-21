@@ -1,58 +1,59 @@
 ---
-layout: default
----
+
+## layout: default
+
+{% assign service = site.data.services
+| where: "id", page.service_id
+| first %}
 
 <section class="page-hero">
   <div class="container">
 
-    <p class="eyebrow">
-      {{ page.service.category }}
-    </p>
+<p class="eyebrow">
+  {{ service.category }}
+</p>
 
-    <h1>
-      {{ page.service.headline }}
-    </h1>
+<h1>
+  {{ service.page.headline }}
+</h1>
 
-    <p class="lead">
-      {{ page.service.intro }}
-    </p>
+<p class="lead">
+  {{ service.page.intro }}
+</p>
 
   </div>
 </section>
-
 
 <section class="service-content">
   <div class="container">
 
-    {% for section in page.service.sections %}
+{% for section in service.page.sections %}
 
-      <div class="service-section">
+  <div class="service-section">
 
-        <h2>{{ section.title }}</h2>
+    <h2>{{ section.heading }}</h2>
 
-        <p>{{ section.text }}</p>
+    <p>{{ section.text }}</p>
 
-      </div>
+  </div>
 
-    {% endfor %}
+{% endfor %}
 
   </div>
 </section>
-
 
 <section class="service-benefits">
   <div class="container">
 
-    <h2>What's included</h2>
+<h2>What's included</h2>
 
-    <ul>
-      {% for benefit in page.service.benefits %}
-        <li>{{ benefit }}</li>
-      {% endfor %}
-    </ul>
+<ul>
+  {% for benefit in service.page.benefits %}
+    <li>{{ benefit }}</li>
+  {% endfor %}
+</ul>
 
   </div>
 </section>
-
 
 {% include cta.html %}
