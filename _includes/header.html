@@ -23,11 +23,7 @@
   <span></span>
 </button>
 
-<nav
-  class="main-navigation"
-  id="main-navigation"
-  aria-label="Main navigation"
->
+<nav class="site-nav" aria-label="Main navigation">
 
   {% for item in site.data.navigation.main %}
 
@@ -35,15 +31,20 @@
 
       <div class="nav-dropdown">
 
-        <a
-          href="{{ item.url | relative_url }}"
+        <button
+          type="button"
           class="nav-dropdown-toggle {% if page.url contains '/services/' %}active{% endif %}"
+          aria-expanded="false"
         >
-          {{ item.title }}
+          <span>{{ item.title }}</span>
           <span class="dropdown-arrow" aria-hidden="true">▾</span>
-        </a>
+        </button>
 
         <div class="nav-dropdown-menu">
+
+          <a href="{{ item.url | relative_url }}">
+            All Services
+          </a>
 
           {% for child in item.children %}
 
