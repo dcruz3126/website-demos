@@ -1,13 +1,14 @@
 ---
+layout: default
+---
 
-## layout: default
-
-{% assign service = site.data.services
+{% assign service = site.data.services.services
 | where: "id", page.service_id
 | first %}
 
 <section class="page-hero">
   <div class="container">
+
 
 <p class="eyebrow">
   {{ service.category }}
@@ -21,11 +22,13 @@
   {{ service.page.intro }}
 </p>
 
+
   </div>
 </section>
 
 <section class="service-content">
   <div class="container">
+
 
 {% for section in service.page.sections %}
 
@@ -39,11 +42,13 @@
 
 {% endfor %}
 
+
   </div>
 </section>
 
 <section class="service-benefits">
   <div class="container">
+
 
 <h2>What's included</h2>
 
@@ -52,6 +57,7 @@
     <li>{{ benefit }}</li>
   {% endfor %}
 </ul>
+
 
   </div>
 </section>
