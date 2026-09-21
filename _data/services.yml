@@ -1,64 +1,150 @@
-packages:
+services:
 
-  - id: foundation
-    name: "Foundation"
-    setup_price: 350
-    monthly_price: 197
-    description: "Get found. Look professional."
-    short_description: >
-      Establish a professional local presence that makes it easy
-      for customers to find your business, understand what you do,
-      and contact you.
-    featured: false
-
-    services:
-      - "Custom local-business website"
-      - "Website hosting, SSL and maintenance"
-      - "Website health monitoring"
-      - "Google Business Profile setup and optimization"
-      - "Google Business Profile health monitoring"
-      - "Automated review requests"
-      - "Review monitoring"
-      - "1 minor website update per month"
-      - "Basic performance reporting"
-
-  - id: framework
-    name: "Framework"
-    setup_price: 550
-    monthly_price: 497
-    description: "Capture more of the business you're already attracting."
-    short_description: >
-      Turn searches, website visits, chats and missed calls into
-      trackable leads while keeping your local presence active.
+  - id: website-design
+    title: "Website Design"
+    short_title: "Web Design"
+    category: "Get Found"
+    description: >
+      A professional website that clearly explains what you do,
+      where you work, and how customers can reach you.
+    icon: "⌂"
+    url: "/services/web-design/"
     featured: true
 
-    services:
-      - "Everything in Foundation"
-      - "Local directory and citation management"
-      - "Website chatbot and lead capture"
-      - "Missed-call text-back"
-      - "Google Business Profile posts"
-      - "Monthly performance reporting"
-      - "Lead monitoring"
-      - "2 minor website updates per month"
+    page:
+      headline: "A website that works while you're working."
+      intro: >
+        When you're on a job, customers shouldn't have to wait around
+        to figure out what you do or how to reach you.
 
-  - id: buildout
-    name: "Buildout"
-    setup_price: 1050
-    monthly_price: 997
-    description: "Keep growing while more of the follow-up happens automatically."
-    short_description: >
-      Combine ongoing local SEO, content growth and automated follow-up
-      so your digital system keeps working when you're busy running jobs.
-    featured: false
+      sections:
+        - heading: "Built around how contractors actually work"
+          text: >
+            Your website should answer the questions customers have before
+            they call: what you do, where you work, what kinds of jobs you
+            handle, and how to get in touch.
 
-    services:
-      - "Everything in Framework"
-      - "Monthly SEO growth program"
-      - "Expanded local SEO"
-      - "Internal-link optimization"
-      - "Automated lead follow-up"
-      - "AI-powered call answering"
-      - "Advanced lead and conversation tracking"
-      - "Advanced performance reporting"
-      - "4 minor website updates per month"
+        - heading: "Simple for customers. Manageable for you."
+          text: >
+            We focus on clear service information, strong calls to action,
+            mobile-friendly design, local search visibility and an
+            infrastructure you don't have to babysit.
+
+      benefits:
+        - "Clear service information"
+        - "Mobile-first design"
+        - "Local search foundations"
+        - "Strong contact and call-to-action paths"
+        - "Fast, lightweight pages"
+        - "Ongoing maintenance"
+
+  - id: local-seo
+    title: "Local SEO"
+    short_title: "Local SEO"
+    category: "Get Found"
+    description: >
+      Improve the accuracy, structure and visibility of your local
+      online presence.
+    icon: "⌖"
+    url: "/services/local-seo/"
+    featured: true
+
+    page:
+      headline: "Make it easier for local customers to find you."
+      intro: >
+        Local search isn't just about adding keywords to a website.
+        Your business information needs to be accurate, consistent
+        and useful across the places customers search.
+
+      sections:
+        - heading: "One source of truth"
+          text: >
+            We organize your core business information so your website,
+            Google Business Profile and other listings stay aligned.
+
+        - heading: "Built for the areas you actually serve"
+          text: >
+            Service areas, services, pages and supporting content are
+            structured around the customers and jobs you're trying to reach.
+
+      benefits:
+        - "Google Business Profile optimization"
+        - "Citation and directory management"
+        - "Service-area optimization"
+        - "Local content"
+        - "Internal linking"
+        - "Search performance monitoring"
+
+  - id: lead-capture
+    title: "Lead Capture"
+    short_title: "Lead Capture"
+    category: "Get the Lead"
+    description: >
+      Capture potential customers even when you're on a job and
+      can't answer the phone.
+    icon: "→"
+    url: "/services/lead-capture/"
+    featured: true
+
+    page:
+      headline: "Stop losing jobs because you couldn't answer the phone."
+      intro: >
+        You're working. The customer is calling. By the time you call back,
+        they may already be talking to the next contractor in the search results.
+
+      sections:
+        - heading: "Turn missed opportunities into conversations"
+          text: >
+            Lead-capture systems give customers another way to reach you
+            and can automatically follow up when you miss a call.
+
+        - heading: "Every inquiry has somewhere to go"
+          text: >
+            Website forms, chat conversations and missed calls can feed
+            into a consistent lead-tracking process.
+
+      benefits:
+        - "Website contact forms"
+        - "Chat-based lead capture"
+        - "Missed-call text-back"
+        - "Lead notifications"
+        - "Conversation tracking"
+        - "Basic follow-up automation"
+
+  - id: automation
+    title: "Business Automation"
+    short_title: "Automation"
+    category: "Keep the System Working"
+    description: >
+      Automate repetitive follow-up and administrative processes
+      without turning your business into a software project.
+    icon: "⚙"
+    url: "/services/automation/"
+    featured: true
+
+    page:
+      headline: "Let the repetitive stuff happen without you."
+      intro: >
+        The goal isn't to automate everything. It's to automate the
+        repetitive things that keep getting pushed aside while you're
+        busy running the business.
+
+      sections:
+        - heading: "Practical automation"
+          text: >
+            We connect the systems you already use and create simple
+            workflows for things like lead follow-up, review requests,
+            notifications and reporting.
+
+        - heading: "Automation you can understand"
+          text: >
+            Your systems should be documented and maintainable rather
+            than becoming another black box you depend on.
+
+      benefits:
+        - "Review request automation"
+        - "Lead follow-up"
+        - "Missed-call recovery"
+        - "Notifications"
+        - "Reporting workflows"
+        - "System monitoring"

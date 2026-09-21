@@ -1296,6 +1296,7 @@ details summary::-webkit-details-marker {
   padding-block: var(--space-3xl) var(--space-xl);
   background: #0b0c0a;
   border-top: 1px solid var(--color-border);
+  margin-top: 4rem;
 }
 
 .footer-grid {
