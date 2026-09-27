@@ -10,6 +10,7 @@ packages:
       for customers to find your business, understand what you do,
       and contact you.
     featured: false
+    stripe_url: https://buy.stripe.com/9B68wPaW39Ju3uafSy7Vm00
 
     services:
       - "Custom local-business website"
@@ -41,6 +42,7 @@ packages:
       Turn searches, website visits, chats and missed calls into
       trackable leads while keeping your local presence active.
     featured: true
+    stripe_url: /frameworkStripeURL/
 
     services:
       - "Everything in Foundation"
@@ -75,6 +77,7 @@ packages:
       Combine ongoing local SEO, content growth and automated follow-up
       so your digital system keeps working when you're busy running jobs.
     featured: false
+    stripe_url: /buildout/StripeURL/
 
     services:
       - "Monthly SEO growth program"

@@ -261,10 +261,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const APPS_SCRIPT_URL =
     "YOUR_APPS_SCRIPT_WEB_APP_URL";
 
-  const STRIPE_PAYMENT_LINK =
-    "YOUR_STRIPE_PAYMENT_LINK";
-
-
   const packageId =
     selectedPackage;
 
@@ -383,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
           window.location.href =
-            STRIPE_PAYMENT_LINK;
+        `/payment/?package=${encodeURIComponent(packageId)}`;
 
         } catch (error) {
 
@@ -439,39 +435,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-
-  const paymentLinks = {
-
-    foundation:
-      "YOUR_FOUNDATION_STRIPE_PAYMENT_LINK",
-
-    framework:
-      "YOUR_FRAMEWORK_STRIPE_PAYMENT_LINK",
-
-    buildout:
-      "YOUR_BUILDOUT_STRIPE_PAYMENT_LINK"
-
-  };
-
-
-  paymentPackageOptions.forEach(option => {
-
-    const packageId =
-      option.dataset.package;
-
-    const paymentButton =
-      option.querySelector(".payment-button");
-
-    if (
-      paymentButton &&
-      paymentLinks[packageId]
-    ) {
-
-      paymentButton.href =
-        paymentLinks[packageId];
-
-    }
-
-  });
 
 });
