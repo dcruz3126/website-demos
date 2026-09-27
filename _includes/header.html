@@ -46,13 +46,15 @@
             All Services
           </a>
 
-          {% for child in item.children %}
+          <!-- {% for child in item.children %} -->
+             {% for service in site.data.services.services %}
+
 
             <a
-              href="{{ child.url | relative_url }}"
-              class="{% if page.url == child.url %}active{% endif %}"
+              href="{{ service.url | relative_url }}"
+              class="{% if page.url == service.url %}active{% endif %}"
             >
-              {{ child.title }}
+              {{ service.title }}
             </a>
 
           {% endfor %}
