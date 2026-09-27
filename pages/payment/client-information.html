@@ -27,53 +27,56 @@ permalink: /client-information/
 </section>
 
 
-<section class="client-information-section section">
+<section class="section">
 
   <div class="container narrow">
 
     <form
+      class="contact-form reveal"
       id="clientInformationForm"
-      class="client-information-form reveal"
     >
 
-      <div class="form-group">
+      <div class="form-grid">
 
-        <label for="firstName">
-          Name
-        </label>
+        <div class="form-field">
 
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          autocomplete="given-name"
-          required
-        >
+          <label for="firstName">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            autocomplete="given-name"
+            required
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label for="lastName">
+            Last name
+          </label>
+
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            autocomplete="family-name"
+            required
+          >
+
+        </div>
 
       </div>
 
 
-      <div class="form-group">
-
-        <label for="lastName">
-          Last name
-        </label>
-
-        <input
-          type="text"
-          id="lastName"
-          name="lastName"
-          autocomplete="family-name"
-          required
-        >
-
-      </div>
-
-
-      <div class="form-group">
+      <div class="form-field">
 
         <label for="company">
-          Company
+          Business name
         </label>
 
         <input
@@ -87,44 +90,47 @@ permalink: /client-information/
       </div>
 
 
-      <div class="form-group">
+      <div class="form-grid">
 
-        <label for="email">
-          Email
-        </label>
+        <div class="form-field">
 
-        <input
-          type="email"
-          id="email"
-          name="email"
-          autocomplete="email"
-          required
-        >
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label for="phone">
+            Phone
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            autocomplete="tel"
+            required
+          >
+
+        </div>
 
       </div>
 
 
-      <div class="form-group">
-
-        <label for="phone">
-          Phone
-        </label>
-
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          autocomplete="tel"
-          required
-        >
-
-      </div>
-
-
-      <div class="form-group">
+      <div class="form-field">
 
         <label for="address">
-          Address
+          Business address
         </label>
 
         <textarea
@@ -138,48 +144,47 @@ permalink: /client-information/
       </div>
 
 
-      <div class="selected-package">
+      <div class="form-field">
 
-        <span class="form-label">
-          Selected Package
-        </span>
+        <label>
+          Selected package
+        </label>
 
-        <strong id="packageName">
+        <div class="form-status" id="packageName">
           Loading...
-        </strong>
+        </div>
 
       </div>
 
 
-      <div class="form-notice">
+      <div class="form-status">
 
-        <p>
-          After submitting your information, you'll be taken to Stripe to
-          complete your one-time setup payment. Your service agreement will
-          be sent separately for electronic signature after payment.
-        </p>
+        After submitting your information, you'll be taken to Stripe to
+        complete your one-time setup payment. Your service agreement will
+        be sent separately for electronic signature after payment.
 
       </div>
 
 
       <button
         type="submit"
-        class="btn btn-primary"
+        class="button button-primary shine"
         id="submitButton"
       >
         Continue to Payment
       </button>
 
 
-      <p
-        class="form-error"
+      <div
+        class="form-status"
         id="formError"
+        role="alert"
+        aria-live="polite"
         hidden
-      ></p>
+      ></div>
 
     </form>
 
   </div>
 
 </section>
-

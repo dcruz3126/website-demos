@@ -20,7 +20,17 @@ packages:
       - "Automated review requests"
       - "Review monitoring"
       - "1 minor website update per month"
-      - "Basic performance reporting"
+
+    full_services: 
+      - "Custom local-business website"
+      - "Website hosting, SSL and maintenance"
+      - "Website health monitoring"
+      - "Google Business Profile setup and optimization"
+      - "Google Business Profile health monitoring"
+      - "Automated review requests"
+      - "Review monitoring"
+      - "1 minor website update per month"
+
 
   - id: framework
     name: "Framework"
@@ -39,8 +49,22 @@ packages:
       - "Missed-call text-back"
       - "Google Business Profile posts"
       - "Monthly performance reporting"
-      - "Lead monitoring"
       - "2 minor website updates per month"
+    
+    full_services: 
+      - "Custom local-business website"
+      - "Website hosting, SSL and maintenance"
+      - "Website health monitoring"
+      - "Google Business Profile setup and optimization"
+      - "Google Business Profile health monitoring"
+      - "Automated review requests"
+      - "Local directory and citation management"
+      - "Website chatbot and lead capture"
+      - "Missed-call text-back"
+      - "Google Business Profile posts"
+      - "Monthly performance reporting"
+      - "2 minor website updates per month"
+
 
   - id: buildout
     name: "Buildout"
@@ -53,7 +77,6 @@ packages:
     featured: false
 
     services:
-      - "Everything in Framework"
       - "Monthly SEO growth program"
       - "Expanded local SEO"
       - "Internal-link optimization"
@@ -62,3 +85,24 @@ packages:
       - "Advanced lead and conversation tracking"
       - "Advanced performance reporting"
       - "4 minor website updates per month"
+    
+    full_services: 
+      - "Custom local-business website"
+      - "Website hosting, SSL and maintenance"
+      - "Website health monitoring"
+      - "Google Business Profile setup and optimization"
+      - "Google Business Profile health monitoring"
+      - "Automated review requests"
+      - "Local directory and citation management"
+      - "Website chatbot and lead capture"
+      - "Missed-call text-back"
+      - "Google Business Profile posts"
+      - "Monthly SEO growth program"
+      - "Expanded local SEO"
+      - "Internal-link optimization"
+      - "Automated lead follow-up"
+      - "AI-powered call answering"
+      - "Advanced lead and conversation tracking"
+      - "Advanced performance reporting"
+      - "4 minor website updates per month"
+    
