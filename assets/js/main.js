@@ -378,8 +378,8 @@ document.addEventListener("DOMContentLoaded", () => {
           });
 
 
-          window.location.href =
-        `/payment/?package=${encodeURIComponent(packageId)}`;
+        window.location.href =
+          "{{ '/payment/' | relative_url }}?package=" +  encodeURIComponent(packageId);
 
         } catch (error) {
 
