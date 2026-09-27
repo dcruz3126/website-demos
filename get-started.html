@@ -1,0 +1,301 @@
+---
+layout: default
+title: Get Started
+description: Review your selected package, services, pricing and important information before getting started.
+permalink: /get-started/
+---
+
+<section class="page-hero">
+
+  <div class="container narrow">
+
+    <span class="eyebrow reveal">
+      Get Started
+    </span>
+
+    <h1 class="reveal">
+      Let's get your business moving.
+    </h1>
+
+    <p class="page-intro reveal">
+      Review your selected package and the details below before continuing.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="get-started-section section">
+
+  <div class="container">
+
+    {% for package in site.data.packages.packages %}
+
+      <div class="package-option{% unless forloop.first %} is-hidden{% endunless %}" data-package="{{ package.id }}">
+
+        <div class="get-started-grid">
+
+          <div class="package-summary reveal">
+
+            <span class="eyebrow">
+              Your Package
+            </span>
+
+            <h2>
+              {{ package.name }}
+            </h2>
+
+            <p class="package-description">
+              {{ package.description }}
+            </p>
+
+            <p>
+              {{ package.short_description }}
+            </p>
+
+
+            <div class="package-pricing">
+
+              <div class="price-item">
+
+                <span class="price-label">
+                  One-Time Setup
+                </span>
+
+                <strong>
+                  ${{ package.setup_price }}
+                </strong>
+
+              </div>
+
+
+              <div class="price-item">
+
+                <span class="price-label">
+                  Monthly Service
+                </span>
+
+                <strong>
+                  ${{ package.monthly_price }}/mo
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <div class="package-services">
+
+              <h3>
+                What's Included
+              </h3>
+
+              <ul>
+
+                {% for service in package.services %}
+
+                  <li>
+                    {{ service }}
+                  </li>
+
+                {% endfor %}
+
+              </ul>
+
+            </div>
+
+          </div>
+
+
+          <div class="get-started-details reveal">
+
+            <span class="eyebrow">
+              Before You Continue
+            </span>
+
+            <h2>
+              A few things to know first.
+            </h2>
+
+
+            <div class="notice-list">
+
+
+              <div class="notice">
+
+                <h3>
+                  Setup Payment
+                </h3>
+
+                <p>
+                  By continuing, you acknowledge that the payment you are
+                  about to make is for the
+                  <strong>${{ package.setup_price }} one-time setup fee</strong>
+                  for the {{ package.name }} package.
+                </p>
+
+              </div>
+
+
+              <div class="notice">
+
+                <h3>
+                  Service Agreement
+                </h3>
+
+                <p>
+                  After payment, you will receive a service agreement for
+                  electronic signature. The agreement contains the full terms
+                  of service, responsibilities, cancellation provisions,
+                  payment terms, and other applicable conditions.
+                </p>
+
+              </div>
+
+
+              <div class="notice">
+
+                <h3>
+                  Monthly Service
+                </h3>
+
+                <p>
+                  The {{ package.name }} package includes an ongoing monthly
+                  service fee of
+                  <strong>${{ package.monthly_price }}/month</strong>.
+                  The service agreement will specify when recurring billing
+                  begins, the billing schedule, and applicable cancellation
+                  provisions.
+                </p>
+
+              </div>
+
+
+              <div class="notice">
+
+                <h3>
+                  Service Scope</h3>
+
+                <p>
+                  Services are limited to the services and deliverables
+                  included in the selected package. Requests outside the
+                  included scope may require additional fees or a separate
+                  agreement.
+                </p>
+
+              </div>
+
+
+              <div class="notice">
+
+                <h3>
+                  Client Responsibilities
+                </h3>
+
+                <p>
+                  Getting started may require business information, account
+                  access, credentials, approvals, domain or hosting access,
+                  and other materials from you. Delays in providing required
+                  information or access may affect the project timeline.
+                </p>
+
+              </div>
+
+
+              <div class="notice">
+
+                <h3>
+                  Third-Party Services
+                </h3>
+
+                <p>
+                  Some services may require third-party platforms, accounts,
+                  registrations, or subscriptions. Any applicable third-party
+                  fees are separate unless specifically stated as included
+                  in your package.
+                </p>
+
+              </div>
+
+
+              <div class="notice">
+
+                <h3>
+                  Results
+                </h3>
+
+                <p>
+                  Website, SEO, review, marketing, and related services do not
+                  guarantee specific rankings, traffic, leads, calls, sales,
+                  revenue, reviews, or other business results.
+                </p>
+
+              </div>
+
+
+              <div class="notice">
+
+                <h3>
+                  Agreement
+                </h3>
+
+                <p>
+                  The service agreement provided for electronic signature
+                  contains the complete terms governing the services. If
+                  there is any conflict between this page and the signed
+                  service agreement, the terms of the signed agreement will
+                  control.
+                </p>
+
+              </div>
+
+
+            </div>
+
+
+            <div class="acknowledgment">
+
+              <label class="checkbox-label">
+
+                <input type="checkbox" class="package-acknowledge">
+
+                <span>
+                  I understand the package, one-time setup fee, and recurring
+                  monthly fee shown above. I understand that the full service
+                  agreement will be provided separately for electronic
+                  signature after payment.
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <div class="get-started-actions">
+
+              <a
+                href="client-information.html?package={{ package.id }}"
+                class="btn btn-primary continue-button"
+              >
+                Continue
+              </a>
+
+              <p class="form-note">
+                You'll provide your business information before payment.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+

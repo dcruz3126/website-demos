@@ -180,3 +180,240 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+
+/**
+ * GET STARTED PAGE
+ */
+
+  const params = new URLSearchParams(window.location.search);
+  const selectedPackage = params.get("package");
+
+  const packageOptions = document.querySelectorAll(".package-option");
+
+  packageOptions.forEach(option => {
+
+    option.classList.toggle(
+      "is-hidden",
+      option.dataset.package !== selectedPackage
+    );
+
+  });
+
+
+  if (!selectedPackage) {
+
+    const firstPackage = document.querySelector(".package-option");
+
+    packageOptions.forEach(option => {
+      option.classList.add("is-hidden");
+    });
+
+    if (firstPackage) {
+      firstPackage.classList.remove("is-hidden");
+    }
+
+  }
+
+
+  document.querySelectorAll(".continue-button").forEach(button => {
+
+    button.addEventListener("click", function(event) {
+
+      const option = this.closest(".package-option");
+      const checkbox = option.querySelector(".package-acknowledge");
+
+      if (!checkbox.checked) {
+
+        event.preventDefault();
+
+        alert("Please acknowledge the information above before continuing.");
+
+      }
+
+    });
+
+  });
+
+
+  /**
+   * CLIENT INFORMATION PAGE
+   */
+
+
+  const APPS_SCRIPT_URL = "YOUR_APPS_SCRIPT_WEB_APP_URL";
+
+  const STRIPE_PAYMENT_LINK = "YOUR_STRIPE_PAYMENT_LINK";
+
+
+  const params = new URLSearchParams(window.location.search);
+  const packageId = params.get("package");
+
+
+  const packages = {
+
+    foundation: "Foundation",
+    framework: "Framework",
+    buildout: "Buildout"
+
+  };
+
+
+  const packageName = packages[packageId];
+
+
+  if (!packageName) {
+
+    document.getElementById("packageName").textContent = "No package selected";
+
+  } else {
+
+    document.getElementById("packageName").textContent = packageName;
+
+  }
+
+
+  const form = document.getElementById("clientInformationForm");
+  const submitButton = document.getElementById("submitButton");
+  const formError = document.getElementById("formError");
+
+
+  form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+
+    if (!packageName) {
+
+      formError.textContent = "Please return to the package page and select a package.";
+      formError.hidden = false;
+
+      return;
+
+    }
+
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Processing...";
+
+    formError.hidden = true;
+
+
+    const formData = new FormData(form);
+
+
+    const data = {
+
+      package: packageId,
+
+      package_name: packageName,
+
+      first_name: formData.get("firstName"),
+
+      last_name: formData.get("lastName"),
+
+      company: formData.get("company"),
+
+      email: formData.get("email"),
+
+      phone: formData.get("phone"),
+
+      address: formData.get("address")
+
+    };
+
+
+    try {
+
+      await fetch(APPS_SCRIPT_URL, {
+
+        method: "POST",
+
+        mode: "no-cors",
+
+        headers: {
+          "Content-Type": "text/plain"
+        },
+
+        body: JSON.stringify(data)
+
+      });
+
+
+      window.location.href = STRIPE_PAYMENT_LINK;
+
+    } catch (error) {
+
+      formError.textContent =
+        "Something went wrong. Please try again.";
+
+      formError.hidden = false;
+
+      submitButton.disabled = false;
+      submitButton.textContent = "Continue to Payment";
+
+    }
+
+  });
+
+
+
+  /**
+   * PAYMENT PAGE
+   */
+
+
+  const params = new URLSearchParams(window.location.search);
+  const selectedPackage = params.get("package");
+
+  const packageOptions = document.querySelectorAll(".payment-package");
+
+
+  packageOptions.forEach(option => {
+
+    option.classList.toggle(
+      "is-hidden",
+      option.dataset.package !== selectedPackage
+    );
+
+  });
+
+
+  if (!selectedPackage) {
+
+    packageOptions.forEach(option => {
+      option.classList.add("is-hidden");
+    });
+
+    const firstPackage = document.querySelector(".payment-package");
+
+    if (firstPackage) {
+      firstPackage.classList.remove("is-hidden");
+    }
+
+  }
+
+
+  const paymentLinks = {
+
+    foundation: "YOUR_FOUNDATION_STRIPE_PAYMENT_LINK",
+
+    framework: "YOUR_FRAMEWORK_STRIPE_PAYMENT_LINK",
+
+    buildout: "YOUR_BUILDOUT_STRIPE_PAYMENT_LINK"
+
+  };
+
+
+  document.querySelectorAll(".payment-package").forEach(option => {
+
+    const packageId = option.dataset.package;
+    const paymentButton = option.querySelector(".payment-button");
+
+    if (paymentLinks[packageId]) {
+
+      paymentButton.href = paymentLinks[packageId];
+
+    }
+
+  });

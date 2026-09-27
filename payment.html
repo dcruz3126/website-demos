@@ -1,0 +1,173 @@
+---
+layout: default
+title: Complete Your Payment
+description: Review your selected package and complete your one-time setup payment.
+permalink: /payment/
+---
+
+<section class="page-hero">
+
+  <div class="container narrow">
+
+    <span class="eyebrow reveal">
+      Almost There
+    </span>
+
+    <h1 class="reveal">
+      Your information has been received.
+    </h1>
+
+    <p class="page-intro reveal">
+      Review your package below, then complete your one-time setup payment.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="payment-section section">
+
+  <div class="container narrow">
+
+    {% for package in site.data.packages.packages %}
+
+      <div
+        class="payment-package{% unless forloop.first %} is-hidden{% endunless %}"
+        data-package="{{ package.id }}"
+      >
+
+        <div class="payment-card reveal">
+
+          <span class="eyebrow">
+            Selected Package
+          </span>
+
+          <h2>
+            {{ package.name }}
+          </h2>
+
+          <p class="package-description">
+            {{ package.description }}
+          </p>
+
+
+          <div class="payment-pricing">
+
+            <div class="price-item">
+
+              <span class="price-label">
+                One-Time Setup
+              </span>
+
+              <strong>
+                ${{ package.setup_price }}
+              </strong>
+
+            </div>
+
+
+            <div class="price-item">
+
+              <span class="price-label">
+                Monthly Service
+              </span>
+
+              <strong>
+                ${{ package.monthly_price }}/month
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="payment-notice">
+
+            <h3>
+              Your next step
+            </h3>
+
+            <p>
+              Your information has been submitted. To begin the next step,
+              complete the <strong>${{ package.setup_price }} one-time setup
+              payment</strong> for the {{ package.name }} package.
+            </p>
+
+            <p>
+              Your recurring monthly service fee of
+              <strong>${{ package.monthly_price }}/month</strong> is separate
+              from this setup payment. The service agreement will specify when
+              recurring billing begins and the applicable payment terms.
+            </p>
+
+          </div>
+
+
+          <div class="payment-actions">
+
+            <a
+              href="#"
+              class="btn btn-primary payment-button"
+              target="_blank"
+              rel="noopener"
+            >
+              Pay ${{ package.setup_price }} Setup Fee
+            </a>
+
+          </div>
+
+
+          <p class="form-note">
+            Payment is processed securely through Stripe.
+          </p>
+
+
+          <div class="payment-disclaimer">
+
+            <h3>
+              Before You Pay
+            </h3>
+
+            <ul>
+
+              <li>
+                This payment is for the one-time setup fee for the
+                {{ package.name }} package.
+              </li>
+
+              <li>
+                The full service agreement will be sent separately for
+                electronic signature after payment.
+              </li>
+
+              <li>
+                The service agreement will contain the complete terms
+                governing the services, including payment, cancellation,
+                responsibilities, and other applicable provisions.
+              </li>
+
+              <li>
+                Services outside the included package scope may be subject
+                to additional fees or a separate agreement.
+              </li>
+
+              <li>
+                Applicable third-party services or fees are separate unless
+                specifically stated as included in your package.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+

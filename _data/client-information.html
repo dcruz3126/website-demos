@@ -1,0 +1,185 @@
+---
+layout: default
+title: Client Information
+description: Provide your business information to get started.
+permalink: /client-information/
+---
+
+<section class="page-hero">
+
+  <div class="container narrow">
+
+    <span class="eyebrow reveal">
+      Get Started
+    </span>
+
+    <h1 class="reveal">
+      Tell us about your business.
+    </h1>
+
+    <p class="page-intro reveal">
+      Provide the information below so we can prepare your account and
+      get everything ready for the next step.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="client-information-section section">
+
+  <div class="container narrow">
+
+    <form
+      id="clientInformationForm"
+      class="client-information-form reveal"
+    >
+
+      <div class="form-group">
+
+        <label for="firstName">
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          autocomplete="given-name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="lastName">
+          Last name
+        </label>
+
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          autocomplete="family-name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="company">
+          Company
+        </label>
+
+        <input
+          type="text"
+          id="company"
+          name="company"
+          autocomplete="organization"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="phone">
+          Phone
+        </label>
+
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          autocomplete="tel"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="address">
+          Address
+        </label>
+
+        <textarea
+          id="address"
+          name="address"
+          rows="3"
+          autocomplete="street-address"
+          required
+        ></textarea>
+
+      </div>
+
+
+      <div class="selected-package">
+
+        <span class="form-label">
+          Selected Package
+        </span>
+
+        <strong id="packageName">
+          Loading...
+        </strong>
+
+      </div>
+
+
+      <div class="form-notice">
+
+        <p>
+          After submitting your information, you'll be taken to Stripe to
+          complete your one-time setup payment. Your service agreement will
+          be sent separately for electronic signature after payment.
+        </p>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+        id="submitButton"
+      >
+        Continue to Payment
+      </button>
+
+
+      <p
+        class="form-error"
+        id="formError"
+        hidden
+      ></p>
+
+    </form>
+
+  </div>
+
+</section>
+
