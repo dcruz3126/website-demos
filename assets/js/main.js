@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
 
   const menuToggle = document.querySelector('.mobile-menu-toggle');
-  const mainNavigation = document.querySelector('.site-nav');
+  const navigation = document.querySelector('.site-nav');
 
   if (menuToggle && navigation) {
 
@@ -179,17 +179,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-});
+
+  /*
+   * Package URL
+   *
+   * Shared by Get Started, Client Information,
+   * and Payment pages.
+   */
+
+  const params =
+    new URLSearchParams(window.location.search);
+
+  const selectedPackage =
+    params.get("package");
 
 
-/**
- * GET STARTED PAGE
- */
+  /**
+   * GET STARTED PAGE
+   */
 
-  const params = new URLSearchParams(window.location.search);
-  const selectedPackage = params.get("package");
-
-  const packageOptions = document.querySelectorAll(".package-option");
+  const packageOptions =
+    document.querySelectorAll(".package-option");
 
   packageOptions.forEach(option => {
 
@@ -203,7 +213,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!selectedPackage) {
 
-    const firstPackage = document.querySelector(".package-option");
+    const firstPackage =
+      document.querySelector(".package-option");
 
     packageOptions.forEach(option => {
       option.classList.add("is-hidden");
@@ -216,38 +227,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  document.querySelectorAll(".continue-button").forEach(button => {
+  document
+    .querySelectorAll(".continue-button")
+    .forEach(button => {
 
-    button.addEventListener("click", function(event) {
+      button.addEventListener("click", function(event) {
 
-      const option = this.closest(".package-option");
-      const checkbox = option.querySelector(".package-acknowledge");
+        const option =
+          this.closest(".package-option");
 
-      if (!checkbox.checked) {
+        const checkbox =
+          option.querySelector(".package-acknowledge");
 
-        event.preventDefault();
+        if (!checkbox.checked) {
 
-        alert("Please acknowledge the information above before continuing.");
+          event.preventDefault();
 
-      }
+          alert(
+            "Please acknowledge the information above before continuing."
+          );
+
+        }
+
+      });
 
     });
-
-  });
 
 
   /**
    * CLIENT INFORMATION PAGE
    */
 
+  const APPS_SCRIPT_URL =
+    "YOUR_APPS_SCRIPT_WEB_APP_URL";
 
-  const APPS_SCRIPT_URL = "YOUR_APPS_SCRIPT_WEB_APP_URL";
+  const STRIPE_PAYMENT_LINK =
+    "YOUR_STRIPE_PAYMENT_LINK";
 
-  const STRIPE_PAYMENT_LINK = "YOUR_STRIPE_PAYMENT_LINK";
 
-
-  const params = new URLSearchParams(window.location.search);
-  const packageId = params.get("package");
+  const packageId =
+    selectedPackage;
 
 
   const packages = {
@@ -259,117 +278,143 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-  const packageName = packages[packageId];
+  const packageName =
+    packages[packageId];
 
 
-  if (!packageName) {
+  const packageNameElement =
+    document.getElementById("packageName");
 
-    document.getElementById("packageName").textContent = "No package selected";
 
-  } else {
+  if (packageNameElement) {
 
-    document.getElementById("packageName").textContent = packageName;
+    if (!packageName) {
+
+      packageNameElement.textContent =
+        "No package selected";
+
+    } else {
+
+      packageNameElement.textContent =
+        packageName;
+
+    }
 
   }
 
 
-  const form = document.getElementById("clientInformationForm");
-  const submitButton = document.getElementById("submitButton");
-  const formError = document.getElementById("formError");
+  const clientInformationForm =
+    document.getElementById("clientInformationForm");
+
+  const submitButton =
+    document.getElementById("submitButton");
+
+  const formError =
+    document.getElementById("formError");
 
 
-  form.addEventListener("submit", async function(event) {
+  if (clientInformationForm) {
 
-    event.preventDefault();
+    clientInformationForm.addEventListener(
+      "submit",
+      async function(event) {
 
-
-    if (!packageName) {
-
-      formError.textContent = "Please return to the package page and select a package.";
-      formError.hidden = false;
-
-      return;
-
-    }
+        event.preventDefault();
 
 
-    submitButton.disabled = true;
-    submitButton.textContent = "Processing...";
+        if (!packageName) {
 
-    formError.hidden = true;
+          formError.textContent =
+            "Please return to the package page and select a package.";
 
+          formError.hidden = false;
 
-    const formData = new FormData(form);
+          return;
 
-
-    const data = {
-
-      package: packageId,
-
-      package_name: packageName,
-
-      first_name: formData.get("firstName"),
-
-      last_name: formData.get("lastName"),
-
-      company: formData.get("company"),
-
-      email: formData.get("email"),
-
-      phone: formData.get("phone"),
-
-      address: formData.get("address")
-
-    };
+        }
 
 
-    try {
+        submitButton.disabled = true;
+        submitButton.textContent = "Processing...";
 
-      await fetch(APPS_SCRIPT_URL, {
-
-        method: "POST",
-
-        mode: "no-cors",
-
-        headers: {
-          "Content-Type": "text/plain"
-        },
-
-        body: JSON.stringify(data)
-
-      });
+        formError.hidden = true;
 
 
-      window.location.href = STRIPE_PAYMENT_LINK;
+        const formData =
+          new FormData(clientInformationForm);
 
-    } catch (error) {
 
-      formError.textContent =
-        "Something went wrong. Please try again.";
+        const data = {
 
-      formError.hidden = false;
+          package: packageId,
 
-      submitButton.disabled = false;
-      submitButton.textContent = "Continue to Payment";
+          package_name: packageName,
 
-    }
+          first_name: formData.get("firstName"),
 
-  });
+          last_name: formData.get("lastName"),
 
+          company: formData.get("company"),
+
+          email: formData.get("email"),
+
+          phone: formData.get("phone"),
+
+          address: formData.get("address")
+
+        };
+
+
+        try {
+
+          await fetch(APPS_SCRIPT_URL, {
+
+            method: "POST",
+
+            mode: "no-cors",
+
+            headers: {
+              "Content-Type": "text/plain"
+            },
+
+            body: JSON.stringify(data)
+
+          });
+
+
+          window.location.href =
+            STRIPE_PAYMENT_LINK;
+
+        } catch (error) {
+
+          formError.textContent =
+            "Something went wrong. Please try again.";
+
+          formError.hidden = false;
+
+          submitButton.disabled = false;
+
+          submitButton.textContent =
+            "Continue to Payment";
+
+        }
+
+      }
+
+    );
+
+  }
 
 
   /**
    * PAYMENT PAGE
    */
 
-
-  const params = new URLSearchParams(window.location.search);
-  const selectedPackage = params.get("package");
-
-  const packageOptions = document.querySelectorAll(".payment-package");
+  const paymentPackageOptions =
+    document.querySelectorAll(".payment-package");
 
 
-  packageOptions.forEach(option => {
+  paymentPackageOptions.forEach(option => {
 
     option.classList.toggle(
       "is-hidden",
@@ -381,11 +426,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!selectedPackage) {
 
-    packageOptions.forEach(option => {
+    paymentPackageOptions.forEach(option => {
       option.classList.add("is-hidden");
     });
 
-    const firstPackage = document.querySelector(".payment-package");
+    const firstPackage =
+      document.querySelector(".payment-package");
 
     if (firstPackage) {
       firstPackage.classList.remove("is-hidden");
@@ -396,24 +442,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const paymentLinks = {
 
-    foundation: "YOUR_FOUNDATION_STRIPE_PAYMENT_LINK",
+    foundation:
+      "YOUR_FOUNDATION_STRIPE_PAYMENT_LINK",
 
-    framework: "YOUR_FRAMEWORK_STRIPE_PAYMENT_LINK",
+    framework:
+      "YOUR_FRAMEWORK_STRIPE_PAYMENT_LINK",
 
-    buildout: "YOUR_BUILDOUT_STRIPE_PAYMENT_LINK"
+    buildout:
+      "YOUR_BUILDOUT_STRIPE_PAYMENT_LINK"
 
   };
 
 
-  document.querySelectorAll(".payment-package").forEach(option => {
+  paymentPackageOptions.forEach(option => {
 
-    const packageId = option.dataset.package;
-    const paymentButton = option.querySelector(".payment-button");
+    const packageId =
+      option.dataset.package;
 
-    if (paymentLinks[packageId]) {
+    const paymentButton =
+      option.querySelector(".payment-button");
 
-      paymentButton.href = paymentLinks[packageId];
+    if (
+      paymentButton &&
+      paymentLinks[packageId]
+    ) {
+
+      paymentButton.href =
+        paymentLinks[packageId];
 
     }
 
   });
+
+});
