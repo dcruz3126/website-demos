@@ -1581,6 +1581,10 @@ strong {
   transform: translateY(0);
 }
 
+.is-hidden {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
