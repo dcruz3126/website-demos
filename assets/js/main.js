@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
 
   const APPS_SCRIPT_URL =
-    "YOUR_APPS_SCRIPT_WEB_APP_URL";
+    "https://script.google.com/macros/s/AKfycbwHZqXTfoxSQZcn1wPnZxCi6LtZ4R2S3-76rsHOsPms5WV9Ifa1_7o9_VXewf_002tB/exec";
 
   const packageId =
     selectedPackage;
@@ -340,26 +340,21 @@ document.addEventListener("DOMContentLoaded", () => {
           new FormData(clientInformationForm);
 
 
-        const data = {
-
-          package: packageId,
-
-          package_name: packageName,
-
-          first_name: formData.get("firstName"),
-
-          last_name: formData.get("lastName"),
-
-          company: formData.get("company"),
-
-          email: formData.get("email"),
-
-          phone: formData.get("phone"),
-
-          address: formData.get("address")
-
-        };
-
+       const data = {
+        name: 'getstarted',
+        package: packageId,
+        package_name: packageName,
+        first_name: formData.get("firstName"),
+        last_name: formData.get("lastName"),
+        company: formData.get("company"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        street: formData.get("street"),
+        city: formData.get("city"),
+        state: formData.get("state"),
+        zip: formData.get("zip"),
+        website: formData.get("website")
+      };
 
         try {
 
