@@ -368,8 +368,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const result = await response.json();
 
-        debug('HTTP status = ', response.status);
-        debug('response = ', result);
+        formError.textContent =
+            response.status + " : " + result;
+
+          formError.hidden = false;
 
       } catch (error) {
 
