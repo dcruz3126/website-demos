@@ -358,7 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
 
-          await fetch(APPS_SCRIPT_URL, {
+          const response = await fetch(APPS_SCRIPT_URL, {
 
             method: "POST",
 
@@ -372,8 +372,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
           });
 
+          const result = await response.json();
 
-        window.location.href =
+          debug('response = ', result)
+
+          window.location.href =
           "../payment/?package=" + encodeURIComponent(packageId);
 
         } catch (error) {

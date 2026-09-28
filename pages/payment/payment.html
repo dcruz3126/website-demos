@@ -20,15 +20,7 @@ permalink: /payment/
     <p class="page-intro reveal">
       Review your package below, then complete your one-time setup payment.
 
-    <a
-      href="{{ package.stripe_url }}"
-      class="button button-primary shine"
-      target="_blank"
-      rel="noopener"
-    >
-      Pay ${{ package.setup_price }} Setup Fee
-    </a>
-
+  
     </p>
 
   </div>
@@ -42,6 +34,16 @@ permalink: /payment/
 
     {% for package in site.data.packages.packages %}
 
+      <a
+      href="{{ package.stripe_url }}"
+      class="button button-primary shine"
+      target="_blank"
+      rel="noopener"
+    >
+      Pay ${{ package.setup_price }} Setup Fee
+    </a>
+
+    
       <div
         class="payment-package{% unless forloop.first %} is-hidden{% endunless %}"
         data-package="{{ package.id }}"
@@ -55,11 +57,7 @@ permalink: /payment/
 
           <h2>
             {{ package.name }}
-          </h2>
-
-          <p class="package-description">
-            {{ package.description }}
-          </p>
+          </h2
 
 
           <div class="payment-pricing">
@@ -95,7 +93,7 @@ permalink: /payment/
           <div class="payment-notice">
 
             <h3>
-              Your next step
+              Your Next Step
             </h3>
 
             <p>
@@ -114,7 +112,7 @@ permalink: /payment/
           </div>
 
           
-
+          <br>
           <div class="payment-disclaimer">
 
             <h3>
@@ -154,6 +152,7 @@ permalink: /payment/
           </div>
 
 
+<br><br>
 
           <div class="payment-actions">
 
