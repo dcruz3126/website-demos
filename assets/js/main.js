@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
 
   const APPS_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbxPY3HKGm4blCxd-NHnyz5ebqxI0ndnA-gYuREFER0/dev";
+    "https://script.google.com/macros/s/AKfycbwHZqXTfoxSQZcn1wPnZxCi6LtZ4R2S3-76rsHOsPms5WV9Ifa1_7o9_VXewf_002tB/exec";
 
   const packageId =
     selectedPackage;
