@@ -356,42 +356,26 @@ document.addEventListener("DOMContentLoaded", () => {
         website: formData.get("website")
       };
 
-        try {
+      try {
 
-          const response = await fetch(APPS_SCRIPT_URL, {
+        const response = await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain"
+          },
+          body: JSON.stringify(data)
+        });
 
-            method: "POST",
+        const result = await response.json();
 
-            mode: "no-cors",
+        debug('HTTP status = ', response.status);
+        debug('response = ', result);
 
-            headers: {
-              "Content-Type": "text/plain"
-            },
+      } catch (error) {
 
-            body: JSON.stringify(data)
+        debug('FETCH ERROR = ', error.message);
 
-          });
-
-          const result = await response.json();
-
-          debug('response = ', result)
-
-          window.location.href =
-          "../payment/?package=" + encodeURIComponent(packageId);
-
-        } catch (error) {
-
-          formError.textContent =
-            "Something went wrong. Please try again.";
-
-          formError.hidden = false;
-
-          submitButton.disabled = false;
-
-          submitButton.textContent =
-            "Continue to Payment";
-
-        }
+      }
 
       }
 
