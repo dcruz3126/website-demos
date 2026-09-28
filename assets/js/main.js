@@ -373,9 +373,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       } catch (error) {
 
-        debug('FETCH ERROR = ', error.message);
+          formError.textContent =
+            error;
 
-      }
+          formError.hidden = false;
+
+          submitButton.disabled = false;
+
+          submitButton.textContent =
+            "Continue to Payment";
+
+        }
 
       }
 
