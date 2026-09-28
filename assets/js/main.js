@@ -318,16 +318,16 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
 
-        if (!packageName) {
+        // if (!packageName) {
 
-          formError.textContent =
-            "Please return to the package page and select a package.";
+        //   formError.textContent =
+        //     "Please return to the package page and select a package.";
 
-          formError.hidden = false;
+        //   formError.hidden = false;
 
-          return;
+        //   return;
 
-        }
+        // }
 
 
         submitButton.disabled = true;
@@ -374,7 +374,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         window.location.href =
-          "{{ '/payment/' | relative_url }}?package=" +  encodeURIComponent(packageId);
+          "../payment/?package=" + encodeURIComponent(packageId);
 
         } catch (error) {
 
