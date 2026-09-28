@@ -19,6 +19,16 @@ permalink: /payment/
 
     <p class="page-intro reveal">
       Review your package below, then complete your one-time setup payment.
+
+    <a
+      href="{{ package.stripe_url }}"
+      class="button button-primary shine"
+      target="_blank"
+      rel="noopener"
+    >
+      Pay ${{ package.setup_price }} Setup Fee
+    </a>
+
     </p>
 
   </div>
@@ -81,7 +91,7 @@ permalink: /payment/
 
           </div>
 
-
+          <br><br>
           <div class="payment-notice">
 
             <h3>
@@ -103,25 +113,7 @@ permalink: /payment/
 
           </div>
 
-
-          <div class="payment-actions">
-
-            <a
-              href="{{ package.stripe_url }}"
-              class="btn btn-primary payment-button"
-              target="_blank"
-              rel="noopener"
-            >
-              Pay ${{ package.setup_price }} Setup Fee
-            </a>
-
-          </div>
           
-
-          <p class="form-note">
-            Payment is processed securely through Stripe.
-          </p>
-
 
           <div class="payment-disclaimer">
 
@@ -160,6 +152,28 @@ permalink: /payment/
             </ul>
 
           </div>
+
+
+
+          <div class="payment-actions">
+
+            <a
+              href="{{ package.stripe_url }}"
+              class="button button-primary shine"
+              target="_blank"
+              rel="noopener"
+            >
+              Pay ${{ package.setup_price }} Setup Fee
+            </a>
+
+
+
+          </div>
+          
+
+          <p class="form-note">
+            Payment is processed securely through Stripe.
+          </p>
 
         </div>
 
