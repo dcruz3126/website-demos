@@ -34,20 +34,20 @@ permalink: /payment/
 
     {% for package in site.data.packages.packages %}
 
-      <a
-      href="{{ package.stripe_url }}"
-      class="button button-primary shine"
-      target="_blank"
-      rel="noopener"
-    >
-      Pay ${{ package.setup_price }} Setup Fee
-    </a>
-
-    
       <div
         class="payment-package{% unless forloop.first %} is-hidden{% endunless %}"
         data-package="{{ package.id }}"
       >
+
+
+          <a
+          href="{{ package.stripe_url }}"
+          class="button button-primary shine"
+          target="_blank"
+          rel="noopener"
+        >
+          Pay ${{ package.setup_price }} Setup Fee
+        </a>
 
         <div class="payment-card reveal">
 
