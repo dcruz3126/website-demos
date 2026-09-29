@@ -147,38 +147,57 @@ document.addEventListener("DOMContentLoaded", () => {
   /*
    * Contact form
    *
-   * The actual Apps Script endpoint will be added later.
+   *
    */
 
+  const api_url = "https://script.google.com/macros/s/AKfycbzMy5AI6bIPXqvSVI89l-0snDTQMOuLIUvnqCm9VsCRAx4qInBUcHgjaFX4dIjcQYZoYQ/exec"
   const form =
-    document.querySelector("#contact-form");
+  document.getElementById("contact-form");
 
-  if (form) {
+if (form) {
 
-    form.addEventListener("submit", event => {
+  form.addEventListener("submit", async function(e) {
 
-      /*
-       * Placeholder for now.
-       *
-       * We'll replace this with the Apps Script
-       * submission logic once your endpoint exists.
-       */
+    e.preventDefault();
 
-      const honeypot =
-        document.querySelector("#website");
+    const status = document.getElementById("form-status");
 
-      if (honeypot && honeypot.value !== "") {
+    const data = {
+      request: "contact",
+      name: form.name.value,
+      company: form.company.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      service: form.service.value,
+      message: form.message.value,
+      website: form.website.value
+    };
 
-        event.preventDefault();
+    status.textContent = "Sending...";
 
-        return;
+    try {
 
-      }
+      const response = await fetch(api_url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain"
+        },
+        body: JSON.stringify(data)
+      });
 
-    });
+      const result = await response.text();
 
-  }
+      status.textContent = result;
 
+    } catch (error) {
+
+      status.textContent = "Something went wrong. Please try again.";
+
+    }
+
+  });
+
+} 
 
   /*
    * Package URL
