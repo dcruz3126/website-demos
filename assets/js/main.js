@@ -360,7 +360,7 @@ if (form) {
 
 
        const data = {
-        name: 'getstarted',
+        request: 'getstarted',
         package: packageId,
         package_name: packageName,
         first_name: formData.get("firstName"),
@@ -377,7 +377,7 @@ if (form) {
 
       try {
 
-        const response = await fetch(APPS_SCRIPT_URL, {
+        await fetch(APPS_SCRIPT_URL, {
           method: "POST",
           headers: {
             "Content-Type": "text/plain"
@@ -385,12 +385,8 @@ if (form) {
           body: JSON.stringify(data)
         });
 
-        const result = await response.text();
-
-        formError.textContent ="no error--- " +
-            response.status + " : " + result;
-
-          formError.hidden = false;
+          window.location.href =
+          "../payment/?package=" + encodeURIComponent(packageId);
 
       } catch (error) {
 
