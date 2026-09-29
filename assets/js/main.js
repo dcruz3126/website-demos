@@ -366,9 +366,9 @@ document.addEventListener("DOMContentLoaded", () => {
           body: JSON.stringify(data)
         });
 
-        const result = await response.json();
+        const result = await response.text();
 
-        formError.textContent =
+        formError.textContent ="no error--- " +
             response.status + " : " + result;
 
           formError.hidden = false;
