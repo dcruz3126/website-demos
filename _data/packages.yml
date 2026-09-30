@@ -35,14 +35,14 @@ packages:
 
   - id: framework
     name: "Framework"
-    setup_price: 550
+    setup_price: 650
     monthly_price: 497
     description: "Capture more of the business you're already attracting."
     short_description: >
       Turn searches, website visits, chats and missed calls into
       trackable leads while keeping your local presence active.
     featured: true
-    stripe_url: /frameworkStripeURL/
+    stripe_url: https://buy.stripe.com/7sY6oH8NV6xiaWCgWC7Vm01
 
     services:
       - "Everything in Foundation"
@@ -70,14 +70,14 @@ packages:
 
   - id: buildout
     name: "Buildout"
-    setup_price: 1050
+    setup_price: 1250
     monthly_price: 997
     description: "Keep growing while more of the follow-up happens automatically."
     short_description: >
       Combine ongoing local SEO, content growth and automated follow-up
       so your digital system keeps working when you're busy running jobs.
     featured: false
-    stripe_url: /buildout/StripeURL/
+    stripe_url: https://buy.stripe.com/7sY28r9RZ4pa4yedKq7Vm02
 
     services:
       - "Monthly SEO growth program"

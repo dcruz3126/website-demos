@@ -1,10 +1,10 @@
-name: "Rank Onsite"
+name: "RANK ONSITE"
 
 tagline: "The systems behind a better-run contracting business."
 
-email: "YOUR EMAIL"
+email: ""
 
-phone: "YOUR PHONE"
+phone: ""
 
 service_area: ""
 
@@ -18,8 +18,8 @@ description: >
 owner_name: ""
 
 contact:
-  email: "YOUR EMAIL"
-  phone: "YOUR PHONE"
+  email: ""
+  phone: ""
 
 social:
   facebook: ""
@@ -27,6 +27,6 @@ social:
   linkedin: ""
 
 booking:
-  enabled: true
+  enabled: false
   url: ""
   label: "Book a consultation"
