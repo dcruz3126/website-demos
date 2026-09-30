@@ -84,3 +84,5 @@ services:
     info: "48"
   - name: "Emergency plumbing"
     info: "49"
+services:
+  - heading: "test service heading"

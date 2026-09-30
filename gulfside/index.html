@@ -178,7 +178,7 @@
     <div class="area-layout">
       <div>
         <span class="eyebrow">Where we work</span>
-        <h2>Proudly serving all of Hillsborough County</h2>
+        <h2>{% site.data.gulfside.service_area.heading %}</h2>
         <p>If you're pouring a glass of Tampa Bay tap water, chances are we can reach you within the hour.</p>
         <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-sm);">Check your area</a>
       </div>
@@ -188,13 +188,7 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         {{ area }} </li>
       {% endfor %}
-        <!-- <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Brandon</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Riverview</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Plant City</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Temple Terrace</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Valrico</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Lutz</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Ruskin</li> -->
+
       </ul>
     </div>
   </div>
@@ -270,7 +264,7 @@
     <div class="cta-banner">
       <h2>{{ site.data.gulfside.cta.title }}</h2>
       <p>{{ site.data.gulfside.cta.subtitle }}</p>
-      <a href="tel:+18135550199" class="btn btn-ghost btn-lg">Call (813) 555-0199</a>
+      <a href="tel:+1{{ site.data.gulfside.business.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}" class="btn btn-ghost btn-lg mobile-call">{{site.data.gulfside.business.phone}}</a>
     </div>
   </div>
 </section>
