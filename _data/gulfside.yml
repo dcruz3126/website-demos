@@ -40,11 +40,11 @@ how_it_works:
   - name: "You relax"
     info: "24"
 service_areas:
-  - "Hillsborough"
-  - "Tampa"
-  - "Riverview"
-  - "Temple Terrace"
-  - "Lutz"
+  - "25"
+  - "26"
+  - "27"
+  - "28"
+  - "29"
 reviews:
   - name: "Maria D, Brandon"
     info: "30"
@@ -58,6 +58,10 @@ reviews:
     info: "34"
   - name: "Karen S, Temple Terrace"
     info: "35"
+  - name: "heading"
+    info: "55"
+  - name: "subheading"
+    info: "56"
 cta:
   title: "36"
   subtitle: "37"
@@ -84,5 +88,26 @@ services:
     info: "48"
   - name: "Emergency plumbing"
     info: "49"
+service_area:
+  - name: "heading"
+    info: "50"
+  - name: "subheading"
+    info: "51"
+review:
+  - name: "subheading"
+    info: "52"
 service:
-  - heading: "test service heading"
+  - name: "heading"
+    info: "53"
+  - name: "subheading"
+    info: "54"
+blog:
+  - name: "heading"
+    info: "57"
+  - name: "subheading"
+    info: "58"
+contact:
+  - name: "heading"
+    info: "59"
+  - name: "subheading"
+    info: "60"
