@@ -1,19 +1,9 @@
 ---
+layout: gulfside
+title: Home
+description: Fast, friendly plumbing repair and installation in Tampa and all of Hillsborough County. Licensed, insured, and available for same-day calls.
+permalink: /gulfside/
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ site.data.gulfside.business.title }}</title>
-<meta name="description" content="Fast, friendly plumbing repair and installation in Tampa and all of Hillsborough County. Licensed, insured, and available for same-day calls.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-{% include gulfside/header.html %}
 
 <section class="hero">
   <div class="hero-inner">
@@ -51,12 +41,28 @@
   <div class="container">
     <div class="trust-grid">
       
-      {% for tst in site.data.gulfside.trust %}
+      
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <div><strong>{{ tst.name }}</strong><span>{{ tst.info }}</span></div>
+        <div><strong>{{ site.data.gulfside.trust.trust1 }}</strong><span>{{ tst.info }}</span></div>
       </div>
-      {% endfor %}
+      
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><strong>{{ site.data.gulfside.trust.trust2 }}</strong><span>{{ tst.info }}</span></div>
+      </div>
+      
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><strong>{{ site.data.gulfside.trust.trust3 }}</strong><span>{{ tst.info }}</span></div>
+      </div>
+
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><strong>{{ site.data.gulfside.trust.trust4 }}</strong><span>{{ tst.info }}</span></div>
+      </div>
+      
+      
       <!-- <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <div><strong>Same-day slots</strong><span>Most weekday calls</span></div>
@@ -182,9 +188,3 @@
     </div>
   </div>
 </section>
-
-{% include gulfside/footer.html %}
-
-<script src="script.js"></script>
-</body>
-</html>
