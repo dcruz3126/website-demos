@@ -1,5 +1,6 @@
 ---
-layout: pristinescreening
+layout: demo
+client: pristinescreening
 title: Page Not Found
 description: The page you're looking for could not be found.
 permalink: /404.html
@@ -24,21 +25,20 @@ permalink: /404.html
 </p>
 
 <div class="hero-actions reveal">
-
+  
   <a
-    href="{{ '/pristinescreening' | relative_url }}"
+    href="{{ '/' | append: page.client | relative_url }}"
     class="button button-primary shine"
   >
     Back to Home
   </a>
 
   <a
-    href="{{ '/pristinescreening/services/' | relative_url }}"
+    href="{{ '/' | append: page.client | append: '/services/' | relative_url }}"
     class="button button-ghost"
   >
     See Services
   </a>
-
 </div>
 
   </div>
