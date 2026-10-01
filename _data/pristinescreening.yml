@@ -18,6 +18,9 @@ trust:
   trust2: "14"
   trust3: "15"
   trust4: "16"
+wefix:
+  heading: "Plumbing trouble, meet its match"
+  subheading: "From a drip that won't quit to a full repipe, our team handles it with the right tools and zero guesswork."
 home_services:
   - name: "emergency plumbing"
     info: "17"
