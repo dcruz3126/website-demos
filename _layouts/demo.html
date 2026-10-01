@@ -140,9 +140,9 @@
           <h4>Hours</h4>
 
           <ul>
-
-            {{ site.data[page.client].business.hours }}
-
+            {% for hour in site.data[page.client].business.hours %}
+              <li>{{ hour }}</li>
+            {% endfor %}
           </ul>
 
         </div>

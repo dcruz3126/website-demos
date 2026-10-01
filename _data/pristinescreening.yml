@@ -6,9 +6,10 @@ business:
   name_emphasis: "Screening"
   phone: "(941) 565-4591"
   email: "santana.cornelio@prestinescreening.com"
-  hours: "Mon to Fri: 7am to 6pm
-Saturday: 8am to 3pm
-Free estimates: call or text anytime"
+  hours: 
+    - "Mon to Fri: 7am to 6pm"
+    - "Saturday: 8am to 3pm"
+    - "Free estimates: call or text anytime"
 hero:
   title: "Torn screens? Dingy driveway? Peeling paint? We're already loading the truck."
   subtitle: "Prestine Screening makes homes in Ruskin and Hillsborough County look sharp, stay protected, and feel brand new. Free estimates, clear pricing, and a crew that treats your home like their own."

@@ -6,8 +6,11 @@ business:
   name_emphasis: "Plumbing Co."
   email: "hello@gulfsideplumbing.example"
   phone: "(813) 555-1234"
-  hours: "Mon to Fri: 7am to 7pm
-Saturday: 8am to 4pm
+  hours:
+    - "Mon to Fri: 7am to 6pm"
+    - "Saturday: 8am to 3pm"
+    - "Free estimates: call or text anytime"
+
 Emergency line: 24/7"
 hero:
   title: "Leaky pipe? Cranky water heater? We're already grabbing the wrench."
