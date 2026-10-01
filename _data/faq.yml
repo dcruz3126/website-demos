@@ -4,57 +4,89 @@ faqs:
     answer: >
       Not necessarily. We'll look at what you already have and determine
       whether it can be improved or whether rebuilding makes more sense.
+      In many cases we're able to build around your existing domain and
+      branding rather than starting completely from scratch.
 
   - question: "Do I have to change my business phone number?"
     answer: >
       No. We don't recommend changing a published business number simply
       for the sake of implementing an automation. Where possible, we work
       with your existing phone system or integrate an appropriate
-      communications system around it.
+      communications system around it. The one exception is features like
+      missed-call text-back or AI call answering, which require a
+      mobile-capable number to send texts; if your current number is a
+      landline, we'll set up a separate tracking number for those features
+      specifically, while your main published number stays the same.
 
   - question: "Do you guarantee Google rankings?"
     answer: >
       No. Search rankings depend on factors outside anyone's control,
       including competition, location, search context and Google's systems.
       Our work focuses on improving the accuracy, structure and usefulness
-      of your online presence.
+      of your online presence. Meaningful ranking movement typically takes
+      three to six months to become measurable, and we report on what's
+      changing each month rather than promising a specific position.
 
   - question: "Who owns my website?"
     answer: >
-      Your business should retain ownership of its domain and business
-      accounts. We'll manage the technical infrastructure we are responsible
-      for and document access appropriately.
+      Your domain name, your Google Business Profile, and your business
+      phone number are always yours, regardless of how long you've been a
+      client. The website itself is owned and hosted by us while you're an
+      active subscriber, which is part of how we're able to offer a lower
+      upfront cost than building a site outright. Every plan includes a
+      point after which the site transfers to you at no charge, and you
+      can also take it sooner for a smaller fee if you'd like to leave
+      before that date. Your service agreement spells out the exact terms
+      for your plan.
 
   - question: "What happens if I need something that isn't included?"
     answer: >
-      Work outside your monthly service is scoped and approved separately.
-      This can include new pages, major redesigns, custom functionality,
-      additional websites, integrations and other substantial work.
+      Work outside your monthly service is scoped and approved separately
+      before we begin. This can include new pages, major redesigns, custom
+      functionality, additional websites, integrations and other
+      substantial work. We'll always give you a clear quote in writing
+      first, nothing extra gets billed without your sign-off.
 
   - question: "Can you work with my existing software?"
     answer: >
       Often, yes. The first step is determining what your current systems
-      can provide through existing integrations, exports or APIs.
+      can provide through existing integrations, exports or APIs. We'll
+      review what you're already using during onboarding and let you know
+      what connects directly and what might need a workaround.
 
   - question: "What happens if I miss a customer call?"
     answer: >
-      Depending on your phone setup, we can implement missed-call recovery
-      that sends a text message to the caller and records the interaction
-      as a lead.
+      Depending on your plan and phone setup, we can implement missed-call
+      text-back, which automatically texts the caller when a call goes
+      unanswered, goes to voicemail, or comes in as busy, and logs the
+      interaction as a lead. The message differs depending on whether the
+      call came in during business hours or after, so callers always get
+      an accurate response either way.
 
   - question: "Do I have to manage the website myself?"
     answer: >
-      No. Your plan includes ongoing maintenance and a defined number of
-      minor website updates. Larger changes are quoted separately.
+      No. Your plan includes ongoing hosting, security, and maintenance,
+      along with a defined number of minor website updates each month,
+      things like text and photo swaps. Larger changes, like new pages or
+      a redesign, are quoted separately so you always know what you're
+      paying for.
 
   - question: "Can I cancel?"
     answer: >
-      Your service agreement will define the applicable cancellation terms.
-      When service ends, we'll also document the appropriate handoff and
-      disable any automations we manage for your business.
+      Yes. Your service agreement sets a minimum term, after which you can
+      cancel anytime with 30 days' written notice and no penalty.
+      Canceling before the end of your minimum term involves a modest
+      early termination fee, and if you'd like to take your website with
+      you before its scheduled transfer date, there's a separate, smaller
+      fee for that as well, decreasing the longer you've been a client.
+      When service ends, we'll document the handoff and disable any
+      automations we manage for your business; your domain and Google
+      Business Profile stay with you throughout, regardless of timing.
 
   - question: "Do you work with contractors outside one specific trade?"
     answer: >
       Yes. The systems are designed for service businesses where the owner
-      or a small team is busy performing or managing jobs rather than sitting
-      at a desk answering every inquiry.
+      or a small team is busy performing or managing jobs rather than
+      sitting at a desk answering every inquiry, plumbers, HVAC
+      technicians, electricians, landscapers, and similar trades all run
+      into the same problem of missed calls and inconsistent follow-up.

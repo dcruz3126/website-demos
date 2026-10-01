@@ -31,17 +31,27 @@
 // ---------- FAQ chat widget ----------
 (function () {
   var faq = [
-    { keywords: ['hour', 'open', 'close', 'time'], answer: "We're open Monday to Friday 7am to 7pm, and Saturday 8am to 4pm. Our emergency line runs 24/7." },
-    { keywords: ['area', 'serve', 'hillsborough', 'tampa', 'brandon', 'riverview', 'plant city', 'temple terrace', 'valrico', 'lutz', 'ruskin'], answer: "We serve all of Hillsborough County: Tampa, Brandon, Riverview, Plant City, Temple Terrace, Valrico, Lutz, and Ruskin." },
-    { keywords: ['emergency', 'burst', 'flood', 'urgent', 'asap'], answer: "Emergencies get top priority. Call us right now at (813) 555-0199, we answer 24/7." },
-    { keywords: ['heater', 'tankless', 'hot water'], answer: "We repair and install both tank and tankless water heaters, gas or electric." },
-    { keywords: ['drain', 'clog', 'slow', 'backed up', 'backup'], answer: "We clear clogged and slow drains without harsh chemicals, and check for the root cause so it stays clear." },
-    { keywords: ['price', 'cost', 'quote', 'estimate', 'much'], answer: "We give upfront pricing before any work starts, no surprise fees. Call for a free estimate." },
-    { keywords: ['license', 'insured', 'insurance'], answer: "We're fully licensed and insured in the State of Florida." },
-    { keywords: ['book', 'appointment', 'schedule'], answer: "Call (813) 555-0199 or fill out the form on our Contact page and we'll get back to you fast." },
-    { keywords: ['leak'], answer: "We track down hidden leaks before they turn into a bigger repair. Call (813) 555-0199 to get one checked out." }
-  ];
-  var fallback = "I don't have that answer handy, but our team definitely does. Call (813) 555-0199 or visit the Contact page.";
+  { keywords: ['plan', 'tier', 'include', 'offer', 'package', 'service'], answer: "We offer three plans: Foundation (your core website, hosting, and local listings), Growth (adds a chatbot, missed-call text-back, and monthly content), and Full Coverage (adds AI call answering, automated follow-up, and multi-location SEO). Want to walk through which one fits your business?" },
+  { keywords: ['price', 'cost', 'much', 'fee', 'pricing'], answer: "Pricing depends on which plan fits your business, there's a one-time setup fee plus a monthly rate. Give us a call and we'll quote you based on what you actually need, not a one-size-fits-all number." },
+  { keywords: ['contract', 'term', 'commit', 'lock in', 'length'], answer: "Plans run on a 6, 12, or 18 month term, your choice. Longer terms come with a lower monthly rate." },
+  { keywords: ['cancel', 'quit', 'leave', 'end', 'out of contract'], answer: "After your minimum term, you can cancel anytime with 30 days' notice, no penalty. Canceling early carries a modest early termination fee, we'll walk you through the exact terms before you sign anything." },
+  { keywords: ['own', 'ownership', 'keep', 'mine', 'belongs'], answer: "Your domain, your Google Business Profile, your reviews, and your content are always yours. The site itself is owned by us while you're an active client, but every plan has a date after which you can take it with you for free, sooner if you'd like to buy it out early." },
+  { keywords: ['setup', 'upfront', 'start', 'begin', 'onboard'], answer: "There's a one-time setup fee that covers your custom site build, Google Business Profile setup, and directory listings. It's due before we start work. Call us for your exact quote." },
+  { keywords: ['rank', 'ranking', 'seo', 'google', 'first page', 'top of google'], answer: "Real ranking movement usually takes 3 to 6 months, and it depends on your market and competition, not just us flipping a switch. We don't promise a specific spot on Google, but we do show you exactly what's moving every month." },
+  { keywords: ['review', 'reviews', 'rating', 'stars'], answer: "We automatically text or email your customers after a completed job to make leaving a review as easy as possible. How many customers actually leave one depends on your service and relationships, we can't guarantee a number, but we do make it effortless." },
+  { keywords: ['missed call', 'miss a call', 'text back', 'missed-call'], answer: "If a call to your business goes unanswered, the caller gets an automatic text so you don't lose the lead to silence. It's included starting on our Growth plan." },
+  { keywords: ['ai', 'call answering', 'answer calls', 'virtual receptionist', 'phone answering'], answer: "Our Full Coverage plan includes AI call answering, it picks up calls you miss, answers common questions, and routes leads to you. It comes with a generous monthly minute allowance." },
+  { keywords: ['chatbot', 'chat', 'bot', 'this thing', 'talking to'], answer: "This chatbot you're talking to right now is a real example of what we build for clients, it answers FAQs and captures leads 24/7. Higher plans can also add scheduling or pricing estimates." },
+  { keywords: ['follow up', 'follow-up', 'lead follow', 'nurture'], answer: "On our Full Coverage plan, leads who don't book get a short automatic follow-up sequence over the next couple weeks, so fewer inquiries slip through the cracks." },
+  { keywords: ['edit', 'change', 'update', 'modify', 'revise'], answer: "Every plan includes a monthly allowance of minor edits, think text and photo swaps, not full redesigns. Bigger changes get a quick separate quote." },
+  { keywords: ['hosting', 'secure', 'security', 'maintenance', 'down', 'uptime'], answer: "Hosting, SSL, security, and maintenance are included on every plan, we handle the technical side so you don't have to think about it." },
+  { keywords: ['directory', 'listing', 'yelp', 'citation', 'nextdoor', 'bbb'], answer: "We get your business listed consistently across major directories like Yelp, Apple Maps, Bing Places, and BBB, and review them annually to catch anything that's drifted out of sync." },
+  { keywords: ['location', 'multiple locations', 'multi-location', 'another city'], answer: "If you operate in more than one city or service area, our Full Coverage plan includes multi-location SEO to build out pages for each." },
+  { keywords: ['support', 'help', 'response time', 'contact you'], answer: "Standard support responds within a few business days for routine requests, faster for anything urgent. Full Coverage clients get priority response times." },
+  { keywords: ['start', 'get started', 'sign up', 'how do i', 'next step'], answer: "Easiest way is to give us a call or fill out the contact form, we'll ask a few quick questions about your business and get you a plan and quote that actually fits." },
+  { keywords: ['demo', 'example', 'see it', 'like this site'], answer: "This site you're looking at is a live example of what we build, website, chatbot, and all. We can build the same thing around your business." }
+];
+  var fallback = "I don't have that answer handy, but our team definitely does. Contact us at www.rankonsite.com/contact/";
 
   var toggleBtn = document.getElementById('chatToggle');
   var panel = document.getElementById('chatPanel');
