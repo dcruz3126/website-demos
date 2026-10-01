@@ -16,7 +16,21 @@
 
 <body>
 
+  {% if page.client == "gulfside" %}
+    {% include gulfside/header.html %}
+  {% elsif page.client == "pristinescreening" %}
+    {% include pristinescreening/header.html %}
+  {% endif %}
+
+
   {{ content }}
+
+
+    {% if page.client == "gulfside" %}
+      {% include gulfside/footer.html %}
+    {% elsif page.client == "pristinescreening" %}
+      {% include pristinescreening/footer.html %}
+    {% endif %}
 
   <script>
     const siteData = {
