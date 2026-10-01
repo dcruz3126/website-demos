@@ -1,0 +1,48 @@
+---
+layout: pristinescreening
+title: Reviews
+description: See what Tampa and Hillsborough County homeowners say about {{ site.data.pristinescreening.business.full_name}}.
+permalink: /pristinescreening/reviews/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Reviews</span>
+    <h1>{{ site.data.pristinescreening.review.heading }}</h1>
+    <p>{{ site.data.pristinescreening.review.subheading }}</p>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="rating-banner">
+      <div class="rating-number">4.9</div>
+      <div>
+        <div class="rating-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+        </div>
+        <span class="rating-meta">Based on 312 reviews across Google and Yelp</span>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+    {% for rev in site.data.pristinescreening.reviews %}        
+      <div class="review-card">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+        </div>
+        <blockquote>{{ rev.name }}</blockquote>
+        <footer>{{ rev.info }}</footer>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div style="text-align:center; margin-top: var(--space-lg);">
+      {% include pristinescreening/callbutton.html%}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,92 @@
+---
+layout: pristinescreening
+title: Contact
+description: Reach Gulfside Plumbing Co. by phone or online form. Serving Tampa and all of Hillsborough County.
+permalink: /pristinescreening/contact/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h1>{{ site.data.pristinescreening.contact.heading }}</h1>
+    <p>{{ site.data.pristinescreening.contact.subheading }}</p>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="contact-layout">
+
+      <div class="contact-card">
+        <h2 style="font-size:1.4rem;">Send us a message</h2>
+        <p style="margin-bottom: var(--space-md);">{{ site.data.pristinescreening.contact.form_subheading }}</p>
+
+        <div class="form-success" id="formSuccess">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
+          Thanks! We got your message and will call you back shortly.
+        </div>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jamie Rivera" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(813) 555-0100" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jamie@email.com">
+          </div>
+          <div class="form-row">
+            <label for="service">What do you need help with?</label>
+            <select id="service" name="service">
+              {% for service in site.data.pristinescreening.services %}
+              <option> {{service.name }} </option>
+              {% endfor %}
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Tell us what's going on</label>
+            <textarea id="message" name="message" placeholder="{{ site.data.pristinescreening.contact.message }}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">Send message</button>
+          <p class="form-note">{{ site.data.pristinescreening.contact.emergency }}</p>
+        </form>
+      </div>
+
+      <div>
+        <div class="info-card info-card--navy">
+          <h3>Talk to a real person</h3>
+          <p>{{ site.data.pristinescreening.contact.cta_subheading}}</p>
+
+          {% include pristinescreening/callbuttonbright.html %}
+
+          <ul class="info-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Service area</strong><span>{{ site.data.pristinescreening.contact.service_area }}</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <div><strong>Email</strong><span>{{ site.data.pristinescreening.business.email }}</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card" style="background: var(--color-white); border: 1px solid var(--color-slate-200);">
+          <h3 style="font-size:1.15rem;">Business hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday to Friday</td><td>7:00am to 7:00pm</td></tr>
+            <tr><td>Saturday</td><td>8:00am to 4:00pm</td></tr>
+            <tr><td>Sunday</td><td>Closed (office)</td></tr>
+            <tr><td>Emergency line</td><td>24/7</td></tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

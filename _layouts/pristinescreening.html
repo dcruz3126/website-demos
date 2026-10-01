@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} | {{ site.data.pristinescreening.business.full_name }}</title>
+<meta name="description" content="{{page.description}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/pristinescreening/style.css' | relative_url }}">
+</head>
+<body>
+
+
+{% include pristinescreening/header.html %}
+
+{{ content }}
+
+{% include pristinescreening/footer.html %}
+
+<script src="{{ '/pristinescreening/script.js' | relative_url }}"></script>
+</body>
+</html>
