@@ -5,6 +5,7 @@ business:
   name_first: "4"
   name_emphasis: "5"
   phone: "6"
+  email: "68-email"
   hours: "7"
 hero:
   title: "8"
@@ -83,14 +84,16 @@ services:
 service_area:
   heading: "50"
   subheading: "51"
-review:
-  subheading: "58"
-  heading: "57"
+home:
+  review: "52"
 service:
   heading: "53"
   subheading: "54"
   emergency: "55"
   cta: "56"
+review:
+  heading: "57"
+  subheading: "58"
 blog:
   heading: "59"
   subheading: "60"
