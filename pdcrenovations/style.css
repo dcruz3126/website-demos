@@ -10,11 +10,10 @@
   --color-navy-700: #6B4635;
   --color-navy-600: #805A47;
 
-  /* SECONDARY — WARM CREAM */
-  --color-orange-500: #F6E3D8;
-  --color-orange-600: #E8CDBD;
-  --color-orange-100: #FBF2EC;
-
+  /* SECONDARY — WARM CREAM  - REPLACED BY ORIGINAL ORANGE*/
+  --color-orange-500: #FFC233;
+  --color-orange-600: #E6A817;
+  --color-orange-100: #FFF0C2;
   /* LIGHT / NEUTRAL */
   --color-cream-50: #FCF8F5;
   --color-white: #FFFFFF;
