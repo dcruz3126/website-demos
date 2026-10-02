@@ -4,8 +4,8 @@ business:
   full_name: "PDC Renovations, LLC"
   name_first: "PDC"
   name_emphasis: "Renovations"
-  phone: "david.marshall@pdcrenovations.com"
-  email: "(813) 313-6073"
+  phone: "(813) 313-6073"
+  email: "david.marshall@pdcrenovations.com"
   hours:
     - "Mon to Fri: 7am to 6pm"
     - "Saturday: 8am to 3pm"
@@ -67,7 +67,7 @@ cta:
   button: "Call"
 footer:
   statement: "Tampa-based builders and repair pros helping Hillsborough County homeowners fix, improve, and protect their homes since day one."
-  license: "Licensed & insured in the State of Florida. License #[placeholder]."
+  license: "Licensed & insured in the State of Florida. License #0000-0000."
 services:
   - name: "Test Service"
     info: "This is a test to see if services updates via yml"
