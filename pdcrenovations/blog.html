@@ -1,0 +1,55 @@
+---
+layout: demo
+client: pdcrenovations
+title: Blog
+description: Tips, maintenance advice, and Tampa homeowner know-how from {{ site.data.pdcrenovations.business.full_name}}
+permalink: /pdcrenovations/blog/
+---
+
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Blog</span>
+    <h1>We write it, you get found.</h1>
+    <p>Every post here is doing quiet work in the background, showing up in searches your competitors aren't.</p>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="blog-grid">
+      {% for post in site.posts %}
+        {% if post.client == "agency" %}
+          <div class="blog-card">
+            <span class="category-pill">{{ post.category }}</span>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+            <div class="blog-card-meta">
+              <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+              <a href="{{ post.url }}" class="card-link">Read more &rarr;</a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="section section--cream">
+  <div class="container">
+    <div class="blog-grid">
+      {% for post in site.posts %}
+      <div class="blog-card">
+        <span class="category-pill">{{ post.category }}</span>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+        <div class="blog-card-meta">
+          <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+          <a href="{{ post.url }}" class="card-link">Read more &rarr;</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section> -->
