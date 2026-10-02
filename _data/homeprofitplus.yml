@@ -4,8 +4,8 @@ business:
   full_name: "Home Profit Plus, LLC"
   name_first: "Home"
   name_emphasis: "Profit Plus"
-  phone: "contact@homeprofitplus.com"
-  email: "(813) 123-4567"
+  phone: "(813) 123-4567"
+  email: "contact@homeprofitplus.com"
   hours:
     - "Mon to Fri: 7am to 6pm"
     - "Saturday: 8am to 3pm"
@@ -67,7 +67,7 @@ cta:
   button: "Call"
 footer:
   statement: "Riverview-based builders and designers helping Hillsborough County homeowners love where they live since day one."
-  license: "Licensed & insured in the State of Florida. License #[placeholder]."
+  license: "Licensed & insured in the State of Florida. License#0000-0000"
 services:
   - name: "Kitchen Remodeling"
     info: "Full kitchen renovations with custom layouts, cabinetry, countertops, backsplash, lighting, and appliances. We design it, build it, and manage every detail."
