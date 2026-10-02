@@ -4,19 +4,31 @@
 
 :root {
   /* Color palette */
-  --color-navy-950: #0B1D30;
-  --color-navy-800: #123253;
-  --color-navy-700: #17406A;
-  --color-navy-600: #1D4D80;
-  --color-orange-500: #FF7A32;
-  --color-orange-600: #E8631C;
-  --color-orange-100: #FFE7D6;
-  --color-cream-50: #FBF8F2;
+  /* PRIMARY — DEEP BLUE */
+  --color-navy-950: #1F3451;
+  --color-navy-800: #304968;
+  --color-navy-700: #45607C;
+  --color-navy-600: #5D7690;
+
+  /* SECONDARY — WARM TAN */
+  --color-orange-500: #C7A171;
+  --color-orange-600: #B28B5D;
+  --color-orange-100: #F1E5D5;
+
+  /* LIGHT / NEUTRAL */
+  --color-cream-50: #F8F7F4;
   --color-white: #FFFFFF;
-  --color-ink: #14212F;
-  --color-slate-500: #5C6C7C;
-  --color-slate-200: #DCE4EA;
-  --color-success: #2FA36B;
+
+  /* PRIMARY TEXT */
+  --color-ink: #1D2936;
+
+  /* SECONDARY TEXT */
+  --color-slate-500: #697989;
+  --color-slate-200: #D9DEE3;
+
+  /* STATUS */
+  --color-success: #4E8068;
+
 
   /* Typography */
   --font-display: "Fredoka", sans-serif;
