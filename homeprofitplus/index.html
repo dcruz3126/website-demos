@@ -1,0 +1,191 @@
+---
+layout: demo
+client: homeprofitplus
+title: Home
+description: Fast, friendly repairs and installation in Tampa and all of Hillsborough County. Licensed, insured, and available for same-day calls.
+permalink: /homeprofitplus/
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>{{ site.data.homeprofitplus.hero.title }}</h1>
+      <p class="lede">{{ site.data.homeprofitplus.hero.subtitle }}</p>
+      <div class="hero-actions">
+        <a href="tel:+1{{ site.data.homeprofitplus.business.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2Z"/></svg>
+          Call {{ site.data.homeprofitplus.business.phone }}
+        </a>
+        <a href="services.html" class="btn btn-secondary btn-lg">See our services</a>
+      </div>
+      <ul class="hero-trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ site.data.homeprofitplus.hero.trust1 }}</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z"/></svg> {{ site.data.homeprofitplus.hero.trust2 }}</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> {{ site.data.homeprofitplus.hero.trust3 }}</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="170" fill="#123253"/>
+        <path d="M140 120c25 0 25 30 50 30s25-30 50-30 25 30 50 30" stroke="#FF7A32" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <rect x="120" y="180" width="160" height="90" rx="24" fill="#17406A"/>
+        <circle cx="160" cy="225" r="14" fill="#FF7A32"/>
+        <circle cx="240" cy="225" r="14" fill="#FBF8F2"/>
+        <path d="M200 270c0 20 16 20 16 40" stroke="#FF7A32" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="216" cy="322" r="10" fill="#FF7A32"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-grid">
+      
+      
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><strong>{{ site.data.homeprofitplus.trust.trust1 }}</strong><span>{{ tst.info }}</span></div>
+      </div>
+      
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><strong>{{ site.data.homeprofitplus.trust.trust2 }}</strong><span>{{ tst.info }}</span></div>
+      </div>
+      
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><strong>{{ site.data.homeprofitplus.trust.trust3 }}</strong><span>{{ tst.info }}</span></div>
+      </div>
+
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><strong>{{ site.data.homeprofitplus.trust.trust4 }}</strong><span>{{ tst.info }}</span></div>
+      </div>
+      
+      
+      <!-- <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><strong>Same-day slots</strong><span>Most weekday calls</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z"/></svg>
+        <div><strong>Licensed & insured</strong><span>State certified</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+        <div><strong>Upfront pricing</strong><span>No surprise fees</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><strong>Local crew</strong><span>Based in Tampa</span></div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we fix</span>
+      <h2>{{ site.data.homeprofitplus.wefix.heading }}</h2>
+      <p>{{ site.data.homeprofitplus.wefix.subheading }}</p>
+    </div>
+    <div class="services-grid">
+    {% for svs in site.data.homeprofitplus.home_services %}
+      <div class="service-card{% if forloop.first %} service-card--feature{% endif %}">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6M4.2 4.2l4.2 4.2M15.5 15.5l4.2 4.2M2 12h6M16 12h6M4.2 19.8l4.2-4.2M15.5 8.5l4.2-4.2"/></svg>
+        </div>
+        <h3>{{ svs.name }}</h3>
+        <p>{{ svs.info }}</p>
+        <span class="card-link">Learn more &rarr;</span>
+      </div>
+    {% endfor %}
+
+    </div>
+    <div style="text-align:center; margin-top: var(--space-lg);">
+      <a href="services.html" class="btn btn-ghost">View all services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section-head section-head--center" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps, zero headaches</h2>
+    </div>
+    <div class="process-rail">
+      {% for how in site.data.homeprofitplus.how_it_works %}
+        <div class="process-step">
+          <div class="step-num">{{ forloop.index }}</div>
+          <h3>{{ how.name }}</h3>
+          <p>{{ how.info }}</p>
+        </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="container">
+    <div class="area-layout">
+      <div>
+        <span class="eyebrow">Where we work</span>
+        <h2>{{ site.data.homeprofitplus.service_area.heading }}</h2>
+        <p>{{ site.data.homeprofitplus.service_area.subheading }}</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-sm);">Check your area</a>
+      </div>
+      <ul class="area-list">
+        
+      {% for area in site.data.homeprofitplus.service_areas %}  
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        {{ area }} </li>
+      {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Word around the neighborhood</span>
+      <h2>{{ site.data.homeprofitplus.home.review }}</h2>
+    </div>
+    
+    <div class="reviews-grid"></div>
+    {% for rev in site.data.homeprofitplus.reviews limit:3 %}  
+      <div class="review-card">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+        </div>
+        <blockquote>{{ rev.info }} </blockquote>
+        <footer>{{ rev.name }}</footer>
+      </div>
+
+    {% endfor %} 
+
+    </div>
+    <div style="text-align:center; margin-top: var(--space-lg);">
+      <a href="reviews.html" class="btn btn-ghost">Read more reviews</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>{{ site.data.homeprofitplus.cta.title }}</h2>
+      <p>{{ site.data.homeprofitplus.cta.subtitle }}</p>
+      {% include homeprofitplus/callbutton.html %}
+    </div>
+  </div>
+</section>
