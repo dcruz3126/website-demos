@@ -747,7 +747,7 @@ button { font-family: inherit; cursor: pointer; }
 .chat-toggle {
   position: fixed;
   bottom: 1.2rem;
-  left: 1.2rem;
+  right: 1.2rem;
   z-index: 60;
   background: var(--color-navy-950);
   color: var(--color-white);
