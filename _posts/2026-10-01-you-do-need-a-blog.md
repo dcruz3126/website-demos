@@ -1,6 +1,6 @@
 ---
 layout: post
-client: "pristinescreening"
+client: "pdcrenovations"
 title: "Do You Really Need a Blog for Your Local Business?"
 date: 2026-10-01
 author: "Rank Onsite"

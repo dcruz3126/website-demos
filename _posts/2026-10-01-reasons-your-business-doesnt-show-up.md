@@ -1,6 +1,6 @@
 ---
 layout: post
-client: "homeprofitplus"
+client: "pdcrenovations"
 title: "Why Your Business Doesn't Show Up When Customers Search 'Near Me'"
 date: 2026-10-01
 author: "Rank Onsite"
