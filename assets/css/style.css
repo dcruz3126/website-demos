@@ -2029,3 +2029,9 @@ margin-bottom: var(--space-2xl);
 .form-step.active {
   display: block;
 }
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}

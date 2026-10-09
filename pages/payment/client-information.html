@@ -31,7 +31,7 @@ permalink: /client-information/
 
 
   <!-- <div class="container narrow"> -->
-    <form class="contact-form reveal">
+    <form class="form-container">
 
       <div class="form-step active" data-step="0">
         <div class="form-field">
@@ -106,22 +106,17 @@ permalink: /client-information/
           <input type="tel" id="phone" name="phone" autocomplete="tel" required>
         </div>
         
-        <button type="button" class="button button-secondary prev-step">Back</button>
-        <button type="button" class="button button-primary next-step">Continue</button>
-      </div>
-      
-
-      
-      <div class="form-field">
-        <label>
-          Selected package
-        </label>
-
-        <div class="form-status" id="packageName">
-          Loading...
+              
+        <div class="form-field"> 
+          <label> Selected package </label>
+          <div class="form-status" id="packageName"> Loading... </div>
         </div>
-      </div>
 
+        <button type="button" class="button button-secondary prev-step">Back</button>
+        <button type="submit" class="button button-primary shine" id="submitButton" >Submit</button>
+
+      </div>
+      
       
       <div class="form-status">
         After submitting your information, you'll be taken to Stripe to
@@ -131,14 +126,7 @@ permalink: /client-information/
 
       <br>
 
-      <button
-        type="submit"
-        class="button button-primary shine"
-        id="submitButton"
-      >
-        Submit 
-      </button>
-
+    
 
       <div
         class="form-status"
