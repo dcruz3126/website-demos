@@ -2021,3 +2021,11 @@ padding: var(--space-xl);
 margin-bottom: var(--space-2xl);
 }
 }
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}

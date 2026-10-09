@@ -1,0 +1,262 @@
+---
+layout: default
+title: Client Information
+description: Provide your business information to get started.
+permalink: /client-information/
+---
+
+<section class="page-hero">
+
+  <div class="container narrow">
+
+    <span class="eyebrow reveal">
+      Get Started
+    </span>
+
+    <h1 class="reveal">
+      Tell us about your business.
+    </h1>
+
+    <p class="page-intro reveal">
+      Important: Please provide the information below. We need this information to prepare your service agreement and get everything ready for the next step.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="container narrow">
+
+    <form
+      class="contact-form reveal"
+      id="clientInformationForm"
+    >
+
+      <div class="form-grid">
+
+        <div class="form-field">
+
+          <label for="firstName">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            autocomplete="given-name"
+            required
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label for="lastName">
+            Last name
+          </label>
+
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            autocomplete="family-name"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label for="company">
+          Business name
+        </label>
+
+        <input
+          type="text"
+          id="company"
+          name="company"
+          autocomplete="organization"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-grid">
+
+        <div class="form-field">
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label for="phone">
+            Phone
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            autocomplete="tel"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+    <div class="form-grid">
+
+  <div class="form-field">
+
+    <label for="street">
+      Street address
+    </label>
+
+    <input
+      type="text"
+      id="street"
+      name="street"
+      autocomplete="street-address"
+      required
+    >
+
+  </div>
+
+  <div class="form-field">
+
+    <label for="city">
+      City
+    </label>
+
+    <input
+      type="text"
+      id="city"
+      name="city"
+      autocomplete="address-level2"
+      required
+    >
+
+  </div>
+
+</div>
+
+
+<div class="form-grid">
+
+  <div class="form-field">
+
+    <label for="state">
+      State
+    </label>
+
+    <input
+      type="text"
+      id="state"
+      name="state"
+      autocomplete="address-level1"
+      required
+    >
+
+  </div>
+
+  <div class="form-field">
+
+    <label for="zip">
+      ZIP code
+    </label>
+
+    <input
+      type="text"
+      id="zip"
+      name="zip"
+      autocomplete="postal-code"
+      required
+    >
+
+  </div>
+
+</div>
+
+
+<div class="form-field">
+
+  <label for="website">
+    If you already have a website
+  </label>
+
+  <input
+    type="text"
+    id="website"
+    name="website"
+    autocomplete="url"
+  >
+
+</div>
+      <div class="form-field">
+
+        <label>
+          Selected package
+        </label>
+
+        <div class="form-status" id="packageName">
+          Loading...
+        </div>
+
+      </div>
+
+      
+      <div class="form-status">
+
+        After submitting your information, you'll be taken to Stripe to
+        complete your one-time setup payment. Your service agreement will
+        be sent separately for electronic signature after payment.
+
+      </div>
+
+      <br>
+
+      <button
+        type="submit"
+        class="button button-primary shine"
+        id="submitButton"
+      >
+        Submit Company Info For Agreement
+      </button>
+
+
+      <div
+        class="form-status"
+        id="formError"
+        role="alert"
+        aria-live="polite"
+        hidden
+      ></div>
+
+    </form>
+
+  </div>
+
+</section>

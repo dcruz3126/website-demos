@@ -272,6 +272,77 @@ if (form) {
 
     });
 
+const steps = document.querySelectorAll(".form-step");
+let currentStep = 0;
+
+function showStep(index) {
+
+  steps.forEach((step, i) => {
+    step.classList.toggle("active", i === index);
+  });
+
+  currentStep = index;
+
+  const progress = document.getElementById("stepProgress");
+
+  if (progress) {
+    progress.textContent =
+      `Step ${currentStep + 1} of ${steps.length}`;
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+// Continue buttons
+document.querySelectorAll(".next-step").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const currentFields =
+      steps[currentStep].querySelectorAll("input, select, textarea");
+
+    for (const field of currentFields) {
+
+      if (!field.checkValidity()) {
+        field.reportValidity();
+        return;
+      }
+
+    }
+
+    if (currentStep < steps.length - 1) {
+      showStep(currentStep + 1);
+    }
+
+  });
+
+});
+
+
+// Back buttons
+document.querySelectorAll(".prev-step").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    if (currentStep > 0) {
+      showStep(currentStep - 1);
+    }
+
+  });
+
+});
+
+
+// Initialize the first step
+if (steps.length) {
+  showStep(0);
+}
+
 
   /**
    * CLIENT INFORMATION PAGE
