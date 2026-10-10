@@ -302,6 +302,7 @@ function showStep(index) {
 document.querySelectorAll(".next-step").forEach(button => {
 
   button.addEventListener("click", () => {
+    console.log("Continue clicked");
 
     const currentFields =
       steps[currentStep].querySelectorAll("input, select, textarea");
